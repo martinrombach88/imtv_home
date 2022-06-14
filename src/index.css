@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+html,
+#root {
+  background-color: black;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+}

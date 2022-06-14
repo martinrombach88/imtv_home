@@ -1,0 +1,188 @@
+.about {
+  background-color: rgb(244, 246, 248);
+  color: black;
+}
+
+.about__Container {
+  display: flex;
+  height: 100%;
+  margin: 0% 10%;
+  justify-content: center;
+  position: relative;
+}
+
+.about__Intro,
+.about__Partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__Partners h1,
+.about__StaffContainer h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.about__Partners {
+  padding-top: 10%;
+  height: 90vh;
+  margin: 1%;
+  margin-bottom: 2%;
+}
+
+.about__PartnersCycler {
+  display: flex;
+  justify-content: center;
+  margin: 3%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 8%;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.about__PartnersCycler div {
+  --animation: slide;
+  animation: var(--animation, none) 30s infinite linear;
+  height: 180%;
+}
+
+.about__Partners img {
+  object-fit: contain;
+  width: 25%;
+  transition: opacity 0.2s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(-180%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+.about__PartnersMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.about__PartnersMobile h1 {
+  font-size: 2rem;
+  padding-bottom: 2%;
+  text-align: center;
+  font-weight: 800;
+}
+.about__PartnersMobImg {
+  height: 160px;
+  margin-bottom: 3%;
+  border-radius: 8%;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.about__StaffContainer {
+  padding-top: 8%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__StaffColor {
+  color: "rgb(174, 213, 243)";
+  background-color: "rgb(33, 54, 80)";
+}
+
+.about__Staff {
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+}
+
+.about__StaffColumn {
+  width: 30%;
+}
+
+.about__StaffProfile {
+  width: 50%;
+}
+
+.about__StaffProfile,
+.about__StaffColumn {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.about__StaffProfile h2 {
+  padding-left: 5%;
+  color: white;
+}
+
+.about__StaffProfile ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 5%;
+}
+
+.about__StaffProfile div {
+  font-size: 1.2rem;
+}
+
+.about__StaffName {
+  cursor: pointer;
+  margin: 2%;
+}
+
+.about__StaffName h5 {
+  font-weight: bold;
+  color: white;
+}
+
+.about__StaffProfile::-webkit-scrollbar,
+.about__StaffColumn::-webkit-scrollbar {
+  background-color: rgb(33, 54, 80);
+  width: 1em;
+}
+
+.about__StaffProfile::-webkit-scrollbar-track,
+.about__StaffColumn::-webkit-scrollbar-track {
+  background-color: rgb(33, 54, 80);
+}
+
+.about__StaffProfile::-webkit-scrollbar-thumb,
+.about__StaffColumn::-webkit-scrollbar-thumb,
+.about__StaffName:hover {
+  background-color: rgb(49, 80, 118);
+}
+
+.about__StaffContentHeader {
+  font-weight: bold;
+}
+
+.about__StaffTitle {
+  padding-left: 12%;
+  width: 100%;
+}
+
+.about__StaffTitle h2 {
+  font-weight: 800;
+}
+
+@media (max-width: 650px) {
+  .about__StaffContainer {
+    padding-top: 15%;
+    margin-top: 5%;
+    height: 75vh;
+  }
+}
