@@ -10,38 +10,41 @@ import Arrow from "../Arrow/Arrow";
 const VideoSlider = ({ mediaList }) => {
   const lang = useLang();
   const navigate = useNavigate();
-  const sliderVids = mediaList;
+  const sliderVids = [];
+  for (let media of mediaList) {
+    if (media.clipVid != null) {
+      sliderVids.push(media);
+    }
+  }
 
   return (
     <div className="carousel__Container">
       <Carousel>
         {sliderVids.map((sliderVid) => {
-          if (sliderVid.clipVid != null) {
-            return (
-              <Carousel.Item key={sliderVid.id}>
-                <ReactPlayer
-                  url={sliderVid.clipVid}
-                  playing={true}
-                  controls={false}
-                  loop={true}
-                  muted={true}
-                  height="125vh"
-                  width="100%"
-                  config={{
-                    youtube: {
-                      controls: 0,
-                    },
-                  }}
-                />
-                <Carousel.Caption
-                  bsPrefix="carousel__Details"
-                  onClick={() => navigate("/video", { state: sliderVid })}
-                >
-                  <h1>{lang ? sliderVid.titleKR : sliderVid.titleENG}</h1>
-                </Carousel.Caption>
-              </Carousel.Item>
-            );
-          }
+          return (
+            <Carousel.Item key={sliderVid.id}>
+              <ReactPlayer
+                url={sliderVid.clipVid}
+                playing={true}
+                controls={false}
+                loop={true}
+                muted={true}
+                height="125vh"
+                width="100%"
+                config={{
+                  youtube: {
+                    controls: 0,
+                  },
+                }}
+              />
+              <Carousel.Caption
+                bsPrefix="carousel__Details"
+                onClick={() => navigate("/video", { state: sliderVid })}
+              >
+                <h1>{lang ? sliderVid.titleKR : sliderVid.titleENG}</h1>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
         })}
       </Carousel>
       <Arrow heightClass="Mid" />
