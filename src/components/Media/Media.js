@@ -3,6 +3,9 @@ import "./Media.css";
 import MediaItem from "./MediaItem";
 import MediaItemMobile from "./MediaItemMobile";
 const Media = ({ mediaList }) => {
+
+
+  
   return (
     <div className="scroll">
       <Header headerStyle={"header initialPos"} />
