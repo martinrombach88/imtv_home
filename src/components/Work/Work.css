@@ -1,26 +1,26 @@
-.media__Img {
+.work__Img {
   object-fit: cover;
   width: 100%;
   height: 70vh;
 }
 
-.media__Container {
+.work__Container {
   position: relative;
   margin: 0;
   padding: 0;
 }
 
-.media__MobileContainer {
+.work__MobileContainer {
   display: none;
   padding: 0;
   margin: 0;
 }
 
 @media (max-width: 650px) {
-  .media__Container {
+  .work__Container {
     display: none;
   }
-  .media__MobileContainer {
+  .work__MobileContainer {
     display: flex;
     object-fit: cover;
     width: 100%;
@@ -28,22 +28,22 @@
     position: relative;
   }
 
-  .media__Img {
+  .work__Img {
     height: 100vh;
     object-fit: cover;
     width: 100%;
   }
 }
 
-.media__ImgDark {
+.work__ImgDark {
   opacity: 0.5;
 }
 
-.media__Hide {
+.work__Hide {
   display: none;
 }
 
-.media__Details {
+.work__Details {
   width: 50%;
   position: absolute;
   top: 10%;
@@ -56,7 +56,7 @@
 }
 
 @media (max-width: 650px) {
-  .media__Details {
+  .work__Details {
     width: 80%;
     position: absolute;
     color: white;
@@ -71,6 +71,6 @@
     justify-content: center;
   }
 }
-.media__Details h5 {
+.work__Details h5 {
   margin: 0;
 }

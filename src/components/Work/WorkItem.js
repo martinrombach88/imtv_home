@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 
-const MediaItem = (media) => {
-  let mediaItem = media.media;
+const WorkItem = (work) => {
+  let workItem = work.work;
   const navigate = useNavigate();
   const [itemHover, setItemHover] = useState(false);
   const lang = useLang();
@@ -17,57 +17,57 @@ const MediaItem = (media) => {
   };
 
   function changeClass() {
-    return `${itemHover ? "media__Details" : "media__Hide"}`;
+    return `${itemHover ? "work__Details" : "work__Hide"}`;
   }
 
   function changeClassImage() {
-    return `${itemHover ? "media__Img media__ImgDark" : "media__Img"}`;
+    return `${itemHover ? "work__Img work__ImgDark" : "work__Img"}`;
   }
 
   return (
     <div
-      className="media__Container"
+      className="work__Container"
       onMouseEnter={imageEnter}
       onMouseLeave={imageLeave}
     >
       <img
         className={changeClassImage()}
-        src={mediaItem.mediaImg}
-        alt={lang ? mediaItem.titleKR : mediaItem.titleENG}
+        src={workItem.workImg}
+        alt={lang ? workItem.titleKR : workItem.titleENG}
       ></img>
       <div className={changeClass()}>
-        <h2>{lang ? mediaItem.titleKR : mediaItem.titleENG}</h2>
-        <h5>{lang ? mediaItem.descriptionKR : mediaItem.descriptionENG}</h5>
+        <h2>{lang ? workItem.titleKR : workItem.titleENG}</h2>
+        <h5>{lang ? workItem.descriptionKR : workItem.descriptionENG}</h5>
         <ul>
-          {mediaItem.channels ? (
+          {workItem.channels ? (
             <li>
               {lang
-                ? "방영채널: " + mediaItem.channels
-                : "Available on: " + mediaItem.channels}
+                ? "방영채널: " + workItem.channels
+                : "Available on: " + workItem.channels}
             </li>
           ) : null}
           <li>
             {lang
-              ? "방영일시: " + mediaItem.date
-              : "Release Date: " + mediaItem.date}
+              ? "방영일시: " + workItem.date
+              : "Release Date: " + workItem.date}
           </li>
           <li>
             {lang
-              ? "출연: " + mediaItem.starringKR
-              : "Starring: " + mediaItem.starringENG}
+              ? "출연: " + workItem.starringKR
+              : "Starring: " + workItem.starringENG}
           </li>
           <li>
             {lang
-              ? "연출: " + mediaItem.directorKR + ", 극본:" + mediaItem.writerKR
+              ? "연출: " + workItem.directorKR + ", 극본:" + workItem.writerKR
               : "Directed by: " +
-                mediaItem.directorENG +
+                workItem.directorENG +
                 ", Written by:" +
-                mediaItem.writerENG}
+                workItem.writerENG}
           </li>
         </ul>
         <button
           className="btn btn-outline-light"
-          onClick={() => navigate("/video", { state: mediaItem })}
+          onClick={() => navigate("/video", { state: workItem })}
         >
           <h5>{lang ? "예고편 보기" : "Watch Trailer"}</h5>
         </button>
@@ -76,4 +76,4 @@ const MediaItem = (media) => {
   );
 };
 
-export default MediaItem;
+export default WorkItem;

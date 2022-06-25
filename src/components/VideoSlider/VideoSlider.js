@@ -7,13 +7,13 @@ import { useLang } from "../Header/LangContext";
 import Footer from "../Header/Footer";
 import Arrow from "../Arrow/Arrow";
 
-const VideoSlider = ({ mediaList }) => {
+const VideoSlider = ({ workList }) => {
   const lang = useLang();
   const navigate = useNavigate();
   const sliderVids = [];
-  for (let media of mediaList) {
-    if (media.clipVid != null) {
-      sliderVids.push(media);
+  for (let work of workList) {
+    if (work.clipVid != null) {
+      sliderVids.push(work);
     }
   }
 

@@ -1,11 +1,11 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header.js";
 import Footer from "./components/Header/Footer.js";
 import SnapScroll from "./components/SnapScroll/SnapScroll.js";
 import VideoSlider from "./components/VideoSlider/VideoSlider";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer.js";
-import Media from "./components/Media/Media.js";
+import Work from "./components/Work/Work.js";
 import News from "./components/News/News.js";
 import NewsArticleView from "./components/News/NewsArticleView.js";
 import About from "./components/About/About.js";
@@ -13,7 +13,7 @@ import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
-import mediaList from "./components/mediaList.js";
+import workList from "./components/Work/workList.js";
 import newsList from "./components/newsList.js";
 import staffList from "./components/staffList.js";
 import production from "./components/production.json";
@@ -24,7 +24,7 @@ function Home() {
   return (
     <div className="scrollSnap">
       <Header headerStyle={"header"} />
-      <VideoSlider mediaList={mediaList} />
+      <VideoSlider workList={workList} />
       <SnapScroll
         hCase="showcaseLink"
         titles={{
@@ -35,7 +35,7 @@ function Home() {
         }}
         image={true}
         object={production}
-        article={newsList[1]}
+        article={newsList[0]}
       />
       <SnapScroll
         hCase="showcaseComponent"
@@ -52,7 +52,7 @@ function App() {
     <LangProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="media" element={<Media mediaList={mediaList} />} />
+        <Route path="work" element={<Work workList={workList} />} />
         <Route path="about" element={<About staffList={staffList} />} />
         <Route path="history" element={<History />} />
         <Route path="news" element={<News list={newsList} />} />
