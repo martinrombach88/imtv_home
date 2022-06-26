@@ -32,7 +32,7 @@ const WorkItem = (work) => {
     >
       <img
         className={changeClassImage()}
-        src={workItem.workImg}
+        src={workItem.image}
         alt={lang ? workItem.titleKR : workItem.titleENG}
       ></img>
       <div className={changeClass()}>
@@ -48,8 +48,8 @@ const WorkItem = (work) => {
           ) : null}
           <li>
             {lang
-              ? "방영일시: " + workItem.date
-              : "Release Date: " + workItem.date}
+              ? "방영일시: " + workItem.releaseDate
+              : "Release Date: " + workItem.releaseDate}
           </li>
           <li>
             {lang
@@ -58,9 +58,9 @@ const WorkItem = (work) => {
           </li>
           <li>
             {lang
-              ? "연출: " + workItem.directorKR + ", 극본:" + workItem.writerKR
+              ? "연출: " + workItem.producerKR + ", 극본:" + workItem.writerKR
               : "Directed by: " +
-                workItem.directorENG +
+                workItem.producerENG +
                 ", Written by:" +
                 workItem.writerENG}
           </li>

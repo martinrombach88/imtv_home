@@ -1,4 +1,4 @@
-const newsList = [
+const localNewsList = [
   {
     id: 1,
     image: "/assets/images//news/news1.jpg",
@@ -123,4 +123,4 @@ const newsList = [
   },
 ];
 
-export default newsList;
+export default localNewsList;

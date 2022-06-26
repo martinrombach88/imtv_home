@@ -4,7 +4,7 @@ const HeaderLinks = ({ mobile }) => {
   let linkClass = mobile ? "header__MobBtn" : "header__Btn";
   return (
     <>
-      <Link to="/media" className={linkClass}>
+      <Link to="/work" className={linkClass}>
         WORK
       </Link>
       <Link to="/news" className={linkClass}>

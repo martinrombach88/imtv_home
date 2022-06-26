@@ -1,6 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
-import workList from "./workList.js";
-import newsList from "../newsList.js";
+import React, { useState, useEffect } from "react";
 
 const WorkAPI = () => {
   const [dataObject, setDataObject] = useState(null);
@@ -9,15 +7,15 @@ const WorkAPI = () => {
     const fetchData = () => {
       // this would usually be your own backend, or localStorage
       // for example
-      fetch("http://localhost:8080/work")
-        // .then((response) => response.json())
-        // .then((result) => setDataObject(result.results[0]))
-        .then((response) => console.log(response))
+      fetch("http://localhost:8080/getwork")
+        .then((response) => response.json())
+        .then((result) => setDataObject(result))
         .catch((error) => console.log("An error occured"));
     };
 
     fetchData();
   }, []);
+  return dataObject;
 };
 
 export default WorkAPI;

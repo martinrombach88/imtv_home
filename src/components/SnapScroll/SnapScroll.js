@@ -133,7 +133,6 @@ const SnapScroll = ({
       }
 
     case "component":
-      console.log(object);
       return (
         <div className={changeClass ? changeClass : "snapScroll"}>
           <div className="snapScroll__ComponentContainer" style={object}>

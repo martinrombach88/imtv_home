@@ -33,7 +33,7 @@ const WorkItemMobile = (work) => {
       <div className="work__MobileContainer" onClick={toggleActive}>
         <img
           className={changeClassImage()}
-          src={workItem.workImgTall}
+          src={workItem.imageTall}
           alt={lang ? workItem.titleKR : workItem.titleENG}
         ></img>
         <div className={changeClass()}>

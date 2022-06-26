@@ -1,4 +1,4 @@
-const staffList = [
+const localStaffList = [
   {
     titleENG: "CEO",
     titleKR: "대표이사",
@@ -363,4 +363,4 @@ const staffList = [
   },
 ];
 
-export default staffList;
+export default localStaffList;
