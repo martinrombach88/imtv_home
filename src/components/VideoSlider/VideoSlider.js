@@ -19,7 +19,7 @@ const VideoSlider = ({ workList }) => {
   const navigate = useNavigate();
   const sliderVids = [];
   for (let work of workList) {
-    if (work.clipVid != null) {
+    if (work.clipVid != "") {
       sliderVids.push(work);
     }
   }

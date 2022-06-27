@@ -6,7 +6,6 @@ import NewsCards from "./NewsCards";
 import NewsPagination from "./NewsPagination";
 
 const News = ({ list, home }) => {
-  // console.log(list);
   //Pagination
   let posts = home ? 1 : 4;
   const paginate = (pageNumber) => setCurrentPage(pageNumber);

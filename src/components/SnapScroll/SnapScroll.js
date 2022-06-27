@@ -55,11 +55,7 @@ const SnapScroll = ({
             )}
 
             <div>
-              {lang ? (
-                <h1>{object.mainTitleKR}</h1>
-              ) : (
-                <h3>{object.mainTitleENG}</h3>
-              )}
+              {lang ? <h1>{object.titleKR}</h1> : <h3>{object.titleENG}</h3>}
 
               {lang ? (
                 <h4>{object.subTitleKR}</h4>

@@ -10,10 +10,7 @@ import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
-import localWorkList from "./components/Work/localWorkList.js";
-// import localNewsList from "./components/localNewsList.js";
-import localStaffList from "./components/localStaffList.js";
-import production from "./components/production.json";
+import localNewsList from "./components/localNewsList.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 
@@ -29,7 +26,9 @@ function App() {
       // for example
       fetch("http://localhost:8080/getnews")
         .then((response) => response.json())
-        .then((result) => setNewsObject(result))
+        .then((result) => {
+          setNewsObject(result);
+        })
         .catch((error) => console.log("An error occurred"));
     };
 
@@ -56,17 +55,33 @@ function App() {
   }, []);
 
   let workList = workObject ? workObject.workItems : null;
-  let newsList = newsObject ? newsObject.newsItems : null;
+  let rawList = newsObject ? newsObject.newsItems : null;
+  let newsList = {};
+  if (rawList) {
+    for (let i = 0; i < rawList.length; i++) {
+      newsList[i] = {
+        id: rawList[i].id,
+        bodyKR: rawList[i].bodyKR.split("~"),
+        bodyENG: rawList[i].bodyENG.split("~"),
+        dateENG: rawList[i].dateENG,
+        dateKR: rawList[i].dateKR,
+        image: rawList[i].image,
+        imageLarge: rawList[i].imageLarge,
+        titleENG: rawList[i].titleENG,
+        titleKR: rawList[i].titleKR,
+      };
+    }
+  }
+  console.log(newsList);
   let staffList = staffObject ? staffObject.staffItems : null;
-  //Note: Make a txt file of the process.
-  //1 get data, add to state
-  //2 change the data in state into a prop (RESEARCH)
-  //3 pass data to children
-  // console.log(staffList);
+
   return (
     <LangProvider>
       <Routes>
-        <Route path="/" element={<Home workList={workList} />} />
+        <Route
+          path="/"
+          element={<Home workList={workList} list={newsList} />}
+        />
         <Route path="work" element={<Work workList={workList} />} />
         <Route path="about" element={<About staffList={staffList} />} />
         <Route path="history" element={<History />} />
