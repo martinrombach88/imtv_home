@@ -16,7 +16,7 @@ function Home({ workList, list }) {
     return (
       <div className="scrollSnap">
         <Header headerStyle={"header"} />
-        {/* <VideoSlider workList={homeWorkList} /> */}
+        <VideoSlider workList={homeWorkList} />
         <SnapScroll
           hCase="showcaseLink"
           titles={{

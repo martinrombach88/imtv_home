@@ -9,12 +9,12 @@ const Work = ({ workList }) => {
       <Header headerStyle={"header initialPos"} />
 
       {workList.map((work, index) => {
-        if (work.inProduction != "1") {
+        if (work.inProduction !== "1") {
           return <WorkItem work={work} key={index} />;
         }
       })}
       {workList.map((work, index) => {
-        if (work.inProduction != "1") {
+        if (work.inProduction !== "1") {
           return <WorkItemMobile work={work} key={index} />;
         }
       })}

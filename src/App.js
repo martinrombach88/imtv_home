@@ -10,20 +10,16 @@ import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
-import localNewsList from "./components/localNewsList.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 
 function App() {
-  //useEffect here - collect and add to state.
   const [workObject, setWorkObject] = useState(null);
   const [newsObject, setNewsObject] = useState(null);
   const [staffObject, setStaffObject] = useState(null);
 
   useEffect(() => {
     const fetchNewsData = () => {
-      // this would usually be your own backend, or localStorage
-      // for example
       fetch("http://localhost:8080/getnews")
         .then((response) => response.json())
         .then((result) => {
@@ -33,8 +29,6 @@ function App() {
     };
 
     const fetchStaffData = () => {
-      // this would usually be your own backend, or localStorage
-      // for example
       fetch("http://localhost:8080/getstaff")
         .then((response) => response.json())
         .then((result) => setStaffObject(result))
@@ -42,8 +36,6 @@ function App() {
     };
 
     const fetchWorkData = () => {
-      // this would usually be your own backend, or localStorage
-      // for example
       fetch("http://localhost:8080/getwork")
         .then((response) => response.json())
         .then((result) => setWorkObject(result))
@@ -55,24 +47,25 @@ function App() {
   }, []);
 
   let workList = workObject ? workObject.workItems : null;
-  let rawList = newsObject ? newsObject.newsItems : null;
-  let newsList = {};
-  if (rawList) {
-    for (let i = 0; i < rawList.length; i++) {
-      newsList[i] = {
-        id: rawList[i].id,
-        bodyKR: rawList[i].bodyKR.split("~"),
-        bodyENG: rawList[i].bodyENG.split("~"),
-        dateENG: rawList[i].dateENG,
-        dateKR: rawList[i].dateKR,
-        image: rawList[i].image,
-        imageLarge: rawList[i].imageLarge,
-        titleENG: rawList[i].titleENG,
-        titleKR: rawList[i].titleKR,
+  let newsList = [];
+  if (newsObject) {
+    for (let item of newsObject.newsItems) {
+      let newItem = {
+        id: item.id,
+        bodyKR: item.bodyKR.split("~"),
+        bodyENG: item.bodyENG.split("~"),
+        dateENG: item.dateENG,
+        dateKR: item.dateKR,
+        image: item.image,
+        imageLarge: item.imageLarge,
+        titleENG: item.titleENG,
+        titleKR: item.titleKR,
       };
+      newsList.push(newItem);
     }
+  } else {
+    newsList = null;
   }
-  console.log(newsList);
   let staffList = staffObject ? staffObject.staffItems : null;
 
   return (
