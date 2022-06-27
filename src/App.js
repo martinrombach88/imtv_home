@@ -11,7 +11,7 @@ import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import localWorkList from "./components/Work/localWorkList.js";
-import localNewsList from "./components/localNewsList.js";
+// import localNewsList from "./components/localNewsList.js";
 import localStaffList from "./components/localStaffList.js";
 import production from "./components/production.json";
 import { LangProvider } from "./components/Header/LangContext";

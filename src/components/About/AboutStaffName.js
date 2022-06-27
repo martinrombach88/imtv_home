@@ -2,10 +2,13 @@ import { useLang } from "../Header/LangContext";
 
 const AboutStaffName = ({ name, setProfile }) => {
   const lang = useLang();
-  const infoListKR = name.infoKR.map((info, index) => {
+  const infoKRSplit = name.infoKR.split("-");
+  const infoENGSplit = name.infoENG.split("-");
+
+  const infoListKR = infoKRSplit.map((info, index) => {
     return <li key={index}>{info}</li>;
   });
-  const infoListENG = name.infoENG.map((info, index) => {
+  const infoListENG = infoENGSplit.map((info, index) => {
     return <li key={index}>{info}</li>;
   });
 
