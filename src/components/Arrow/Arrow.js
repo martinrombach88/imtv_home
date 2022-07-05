@@ -10,6 +10,8 @@ const Arrow = ({ direction, heightClass }) => {
     height = "arrow arrow__Mid";
   } else if (heightClass === "MidRight") {
     height = "arrow arrow__MidRight";
+  } else if (heightClass === "MidBottom") {
+    height = "arrow arrow__MidBottom";
   }
 
   if (heightClass) {

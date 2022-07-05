@@ -55,7 +55,6 @@ const VideoSlider = ({ workList }) => {
         })}
       </Carousel>
       <Arrow heightClass="Mid" />
-      <Footer />
     </div>
   );
 };

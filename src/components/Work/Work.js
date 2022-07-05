@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import "./Work.css";
 import WorkItem from "./WorkItem";
 import WorkItemMobile from "./WorkItemMobile";
-
+import Footer from "../../components/Header/Footer.js";
 const Work = ({ workList }) => {
   return (
     <div className="scroll">
@@ -18,6 +18,7 @@ const Work = ({ workList }) => {
           return <WorkItemMobile work={work} key={index} />;
         }
       })}
+      <Footer fixed={true} />
     </div>
   );
 };

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(244, 246, 248);
+  padding-bottom: 5%;
 }
 
 .news h1 {

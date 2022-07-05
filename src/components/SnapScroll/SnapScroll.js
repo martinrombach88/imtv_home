@@ -2,6 +2,7 @@ import "./SnapScroll.css";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import Arrow from "../Arrow/Arrow";
+import Footer from "../Header/Footer";
 
 const SnapScroll = ({
   hCase,
@@ -45,53 +46,55 @@ const SnapScroll = ({
     case "showcaseLink":
       imageLink = true;
       return (
-        <div className={changeClass ? changeClass : "snapScroll"}>
-          {imageRender}
-          <div className="snapScroll__Content" style={object}>
-            {lang ? (
-              <h5>{titles.toptitleKR}</h5>
-            ) : (
-              <h5>{titles.toptitleENG}</h5>
-            )}
+        <>
+          <div className={changeClass ? changeClass : "snapScroll"}>
+            {imageRender}
+            <div className="snapScroll__Content" style={object}>
+              {lang ? (
+                <h5>{titles.toptitleKR}</h5>
+              ) : (
+                <h5>{titles.toptitleENG}</h5>
+              )}
 
-            <div>
-              {lang ? <h1>{object.titleKR}</h1> : <h3>{object.titleENG}</h3>}
+              <div>
+                {lang ? <h1>{object.titleKR}</h1> : <h3>{object.titleENG}</h3>}
+
+                {lang ? (
+                  <h4>{object.subTitleKR}</h4>
+                ) : (
+                  <h5>{object.subTitleENG}</h5>
+                )}
+              </div>
 
               {lang ? (
-                <h4>{object.subTitleKR}</h4>
+                <p
+                  style={{ fontSize: "1.2em" }}
+                  className="snapScroll__Btn"
+                  to="news_article"
+                  onClick={() =>
+                    navigate("/news_article", { state: { article } })
+                  }
+                  state={{ lang }}
+                >
+                  {titles.bottomtitleKR}
+                </p>
               ) : (
-                <h5>{object.subTitleENG}</h5>
+                <p
+                  style={{ fontSize: "1em" }}
+                  className="snapScroll__Btn"
+                  to="news_article"
+                  onClick={() =>
+                    navigate("/news_article", { state: { article } })
+                  }
+                >
+                  {titles.bottomtitleENG}
+                </p>
               )}
+
+              <Arrow heightClass={"MidBottom"} />
             </div>
-
-            {lang ? (
-              <p
-                style={{ fontSize: "1.2em" }}
-                className="snapScroll__Btn"
-                to="news_article"
-                onClick={() =>
-                  navigate("/news_article", { state: { article } })
-                }
-                state={{ lang }}
-              >
-                {titles.bottomtitleKR}
-              </p>
-            ) : (
-              <p
-                style={{ fontSize: "1em" }}
-                className="snapScroll__Btn"
-                to="news_article"
-                onClick={() =>
-                  navigate("/news_article", { state: { article } })
-                }
-              >
-                {titles.bottomtitleENG}
-              </p>
-            )}
-
-            <Arrow />
           </div>
-        </div>
+        </>
       );
 
     case "showcaseText":

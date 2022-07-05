@@ -20,7 +20,7 @@ const History = () => {
   const customTheme = createTheme(themes.default, {
     timeline: {
       fontFamily: "Inter",
-      fontSize: "1.4rem",
+      fontSize: "1.0rem",
       fontWeight: 500,
     },
     imageAtom: {
@@ -31,7 +31,7 @@ const History = () => {
     },
     imageText: {
       fontFamily: "Inter",
-      fontSize: "1.4rem",
+      fontSize: "1.0rem",
       fontWeight: 500,
     },
     timelineTrack: {
@@ -44,7 +44,7 @@ const History = () => {
     },
     date: {
       fontFamily: "Inter",
-      fontSize: "1.4rem",
+      fontSize: "1.2rem",
       fontWeight: 800,
       color: "rgb(40, 110, 180)",
       backgroundColor: "#efefef",

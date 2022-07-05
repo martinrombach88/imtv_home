@@ -44,7 +44,7 @@ const News = ({ list, home }) => {
             paginate={paginate}
           />
         </div>
-        <Footer />
+        <Footer fixed={true} />
       </div>
     );
   }
