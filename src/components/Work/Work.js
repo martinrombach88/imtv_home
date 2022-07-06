@@ -4,23 +4,26 @@ import WorkItem from "./WorkItem";
 import WorkItemMobile from "./WorkItemMobile";
 import Footer from "../Footer/Footer.js";
 const Work = ({ workList }) => {
-  const filteredList = workList.map((work, index) => {
+  const filteredList = [];
+  for (let work of workList) {
     if (work.inProduction !== "1") {
-      return <WorkItem work={work} key={index} />;
+      filteredList.push(work);
     }
+  }
+  let webList = filteredList.map((work, index) => {
+    return <WorkItem work={work} key={index} />;
   });
-  const filteredListMobile = workList.map((work, index) => {
-    if (work.inProduction !== "1") {
-      return <WorkItemMobile work={work} key={index} />;
-    }
+
+  let mobileList = filteredList.map((work, index) => {
+    return <WorkItemMobile work={work} key={index} />;
   });
 
   return (
     <div className="scroll">
       <Header headerStyle={"header initialPos"} />
-      {filteredList}
-      {filteredListMobile}
-      <Footer fixed={true} />
+      {webList}
+      {mobileList}
+      <Footer />
     </div>
   );
 };
