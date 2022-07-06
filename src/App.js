@@ -1,4 +1,6 @@
-import { React, useState, useEffect } from "react";
+//For SQL
+// import { React, useState, useEffect } from "react";
+
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home.js";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer.js";

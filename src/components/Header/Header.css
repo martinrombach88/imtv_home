@@ -16,32 +16,9 @@
   color: rgb(214, 214, 214);
 }
 
-.footer {
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-}
 
-.footer__Fixed {
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
-}
 
-@media (max-width: 650px) {
-  .footer__Fixed {
-    display: none;
-  }
-}
-
-.footer p {
-  margin: 0;
-}
-
-.footer__ArrowDiv {
+/* .footer__ArrowDiv {
   background: #101010;
   color: rgb(214, 214, 214);
   position: relative;
@@ -53,7 +30,7 @@
 .footer__Arrow {
   position: absolute;
   bottom: 20%;
-}
+} */
 
 .initialPos {
   position: initial;

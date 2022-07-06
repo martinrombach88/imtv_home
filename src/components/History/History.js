@@ -9,7 +9,7 @@ import {
 import { useLang } from "../Header/LangContext";
 import Header from "../Header/Header.js";
 import "./History.css";
-import Footer from "../Header/Footer.js";
+import Footer from "../Footer/Footer.js";
 
 const History = () => {
   const lang = useLang();

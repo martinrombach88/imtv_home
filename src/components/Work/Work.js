@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import "./Work.css";
 import WorkItem from "./WorkItem";
 import WorkItemMobile from "./WorkItemMobile";
-import Footer from "../../components/Header/Footer.js";
+import Footer from "../Footer/Footer.js";
 const Work = ({ workList }) => {
   return (
     <div className="scroll">

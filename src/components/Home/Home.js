@@ -1,6 +1,6 @@
 import { React } from "react";
 import Header from "../../components/Header/Header.js";
-import Footer from "../../components/Header/Footer.js";
+import Footer from "../Footer/Footer.js";
 import SnapScroll from "../../components/SnapScroll/SnapScroll.js";
 import VideoSlider from "../../components/VideoSlider/VideoSlider";
 import News from "../../components/News/News.js";
@@ -11,15 +11,13 @@ function Home({ workList, list }) {
   let homeWorkList = workList ? workList : null;
 
   if ((newsList, homeWorkList)) {
-    let newsArticle = newsList ? newsList[0] : null;
+    // let newsArticle = newsList ? newsList[0] : null;
     let inProduction = null;
     for (let item of homeWorkList) {
       if (item.inProduction === "1") {
         inProduction = item;
       }
     }
-    //Right now inProduction is hardcoded. It needs to use the 'inProduction'
-    //column in the database.
 
     return (
       <>

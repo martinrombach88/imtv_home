@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import Footer from "../Header/Footer";
+import Footer from "../Footer/Footer";
 import "./Contact.css";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";

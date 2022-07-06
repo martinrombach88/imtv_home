@@ -19,7 +19,6 @@ const AboutStaff = ({ staffList }) => {
   return (
     <>
       <div className="about__Container">
-        <Arrow direction={true} />
         <div className="about__StaffContainer">
           <div className="about__StaffTitle">
             <h2>KEY TEAM</h2>
@@ -30,6 +29,7 @@ const AboutStaff = ({ staffList }) => {
             <div className="about__StaffProfile">{profile}</div>
           </div>
         </div>
+        <Arrow direction={true} heightClass="MidBottom" />
       </div>
     </>
   );

@@ -4,7 +4,6 @@ import ReactPlayer from "react-player";
 import { Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
-import Footer from "../Header/Footer";
 import Arrow from "../Arrow/Arrow";
 
 //Failed to execute 'postMessage' on 'DOMWindow': The target origin provided
@@ -19,7 +18,7 @@ const VideoSlider = ({ workList }) => {
   const navigate = useNavigate();
   const sliderVids = [];
   for (let work of workList) {
-    if (work.clipVid != "") {
+    if (work.clipVid !== "") {
       sliderVids.push(work);
     }
   }

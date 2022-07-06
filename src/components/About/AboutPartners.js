@@ -23,7 +23,7 @@ const AboutPartners = () => {
             <div>{renderedImages}</div>
           </div>
         </div>
-        <Arrow />
+        <Arrow heightClass={"MidBottom"} />
       </div>
     </>
   );

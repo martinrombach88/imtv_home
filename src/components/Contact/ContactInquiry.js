@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import Footer from "../Header/Footer";
+import Footer from "../Footer/Footer";
 import ContactConsent from "./ContactConsent";
 import { useForm } from "react-hook-form";
 import { useLang } from "../Header/LangContext";

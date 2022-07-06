@@ -14,3 +14,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
 }
+
+.footer {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
