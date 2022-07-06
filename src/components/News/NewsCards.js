@@ -32,10 +32,10 @@ const NewsCards = ({ currentPosts, home, pagination }) => {
                 {lang ? card.titleKR : card.titleENG}
               </h4>
               <h5>{lang ? card.dateKR : card.dateENG}</h5>
+              <Arrow direction={true} heightClass={"Mid"} />
             </div>
 
             {pagination}
-            <Arrow direction={true} />
           </div>
         </div>
       );
@@ -66,7 +66,7 @@ const NewsCards = ({ currentPosts, home, pagination }) => {
   });
 
   return home ? (
-    renderedCards
+    <>{renderedCards}</>
   ) : (
     <div className="news__Cards">{renderedCards}</div>
   );

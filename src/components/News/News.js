@@ -19,7 +19,6 @@ const News = ({ list, home }) => {
   if (home) {
     return (
       <>
-        <Arrow heightClass="High" />
         <NewsCards
           currentPosts={currentPosts}
           home={home}
@@ -30,7 +29,9 @@ const News = ({ list, home }) => {
               paginate={paginate}
             />
           }
-        ></NewsCards>
+        >
+          
+        </NewsCards>
       </>
     );
   } else {

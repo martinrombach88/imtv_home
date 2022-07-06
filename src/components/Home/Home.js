@@ -41,7 +41,7 @@ function Home({ workList, list }) {
             image={true}
           />
         </div>
-        <Footer fixed={true} />
+        <Footer />
       </>
     );
   } else {
