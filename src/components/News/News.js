@@ -4,7 +4,6 @@ import "./News.css";
 import { useState } from "react";
 import NewsCards from "./NewsCards";
 import NewsPagination from "./NewsPagination";
-import Arrow from "../Arrow/Arrow";
 
 const News = ({ list, home }) => {
   //Pagination
@@ -29,9 +28,7 @@ const News = ({ list, home }) => {
               paginate={paginate}
             />
           }
-        >
-          
-        </NewsCards>
+        ></NewsCards>
       </>
     );
   } else {
