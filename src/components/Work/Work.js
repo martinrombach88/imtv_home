@@ -19,7 +19,7 @@ const Work = ({ workList }) => {
   });
 
   return (
-    <div className="scroll">
+    <div className="scroll scroll__Padded">
       <Header headerStyle={"header initialPos"} />
       {webList}
       {mobileList}
