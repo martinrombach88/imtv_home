@@ -131,3 +131,12 @@
   margin: 2%;
   border: black 1px solid;
 }
+
+.submitted {
+  background-color: rgb(244, 246, 248);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

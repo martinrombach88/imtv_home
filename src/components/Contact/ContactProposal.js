@@ -1,23 +1,36 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import ContactConsent from "./ContactConsent";
-import { useForm } from "react-hook-form";
-import "./Contact.css";
+import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
+import { useRef } from "react";
+import "./Contact.css";
 
 const ContactProposal = () => {
   const lang = useLang();
-  const { register, handleSubmit } = useForm();
+  const form = useRef();
+  const navigate = useNavigate();
 
-  const onSubmit = (data) => {
-    const formInfo = `Your Submission: \nName: ${data.name}\nDate of Birth: ${
-      data.birthday
-    }\nGender: ${data.gender} ${
-      data.plan[0].name ? "\nPlan: " + data.plan[0].name : null
-    } ${data.scenario[0].name ? "\nScenario: " + data.scenario[0].name : null}${
-      data.extra[0].name ? "\nAdditional: " + data.extra[0].name : null
-    }\nSummary: ${data.summary}\nPersonal Info Consent: ${data.consent}`;
-    alert(formInfo);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log("send!");
+
+    emailjs
+      .sendForm(
+        "service_09p1a4j",
+        "template_g3bos26",
+        form.current,
+        "FYYZqMNi8ET9baB-j"
+      )
+      .then(
+        (result) => {
+          navigate("/submitted");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -37,19 +50,9 @@ const ContactProposal = () => {
               ? "제안 또는 시나리오의 시놉시스 및 대본(필수) ※"
               : "Synopsis and script of a proposal or scenario (required) ※"}
           </p>
-          <p>
-            {lang
-              ? "최대 파일 크기는 10MB입니다. 여러 첨부 파일을 압축하십시오. ※"
-              : "Max file size is 10MB. Please compress multiple attachments. ※"}
-          </p>
-          <p>
-            {lang
-              ? "접수된 서류는 개별적으로 검토 후 회신드리겠습니다. ※"
-              : "Documents received will be reviewed and responded to individually. ※"}
-          </p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="contact__formDiv">
             <div className="contact__FormField">
               <p>
@@ -57,17 +60,15 @@ const ContactProposal = () => {
                   {lang ? "제안 또는 시나리오입니다." : "Proposal or Scenario"}
                 </label>
               </p>
-              <select
-                name="formType"
-                {...register("formType", { required: true })}
-                className="form-select"
-              >
-                <option selected value="select">
+              <select name="formType" className="form-select">
+                <option defaultValue="select">
                   {lang ? "옵션을 선택하십시오." : "Please select an option"}
                 </option>
-                <option value="proposal">{lang ? "제안." : "Proposal"}</option>
-                <option value="scenario">
-                  {lang ? "시나리오." : "Scenario"}
+                <option defaultValue="proposal">
+                  {lang ? "제안" : "Proposal"}
+                </option>
+                <option defaultValue="scenario">
+                  {lang ? "시나리오" : "Scenario"}
                 </option>
               </select>
             </div>
@@ -76,12 +77,7 @@ const ContactProposal = () => {
               <p>
                 <label htmlFor="name">{lang ? "성함." : "Name"}</label>
               </p>
-              <input
-                type="text"
-                name="name"
-                className="form-control"
-                {...register("name", { required: true })}
-              />
+              <input type="text" name="name" className="form-control" />
             </div>
 
             <div className="contact__FormField">
@@ -89,12 +85,7 @@ const ContactProposal = () => {
                 <label htmlFor="birthday"> {lang ? "생신." : "Birthday"}</label>
               </p>
 
-              <input
-                type="date"
-                name="birthday"
-                className="form-control"
-                {...register("birthday", { required: true })}
-              />
+              <input type="date" name="birthday" className="form-control" />
             </div>
 
             <div className="contact__FormField form-check">
@@ -107,9 +98,8 @@ const ContactProposal = () => {
                   type="radio"
                   id="male"
                   name="gender"
-                  value="Male"
+                  defaultValue="Male"
                   className="form-check-input"
-                  {...register("gender", { required: true })}
                 />
               </div>
               <div className="form-check form-check-inline">
@@ -118,9 +108,8 @@ const ContactProposal = () => {
                   type="radio"
                   id="female"
                   name="gender"
-                  value="Female"
+                  defaultValue="Female"
                   className="form-check-input"
-                  {...register("gender", { required: true })}
                 />
               </div>
               <div className="form-check form-check-inline">
@@ -129,9 +118,8 @@ const ContactProposal = () => {
                   type="radio"
                   id="neutral"
                   name="gender"
-                  value="Neutral"
+                  defaultValue="Neutral"
                   className="form-check-input"
-                  {...register("gender", { required: true })}
                 />
               </div>
             </div>
@@ -145,46 +133,48 @@ const ContactProposal = () => {
                 name="email"
                 className="form-control"
                 placeholder="name@example.com"
-                {...register("email", { required: true })}
               />
             </div>
 
             <div className="contact__FormField mb-3">
               <label htmlFor="plan">{lang ? "계획" : "Plan"}</label>
-              <input
+              <textarea
                 className="form-control"
-                type="file"
+                name="plan"
                 id="plan"
-                {...register("plan", { required: false })}
-              />
+                cols="30"
+                rows="10"
+              ></textarea>
             </div>
 
             <div className="contact__FormField mb-3">
-              <label htmlFor="scenario" class="form-label">
+              <label htmlFor="scenario" className="form-label">
                 {lang ? "시나리오" : "Scenario"}
               </label>
-              <input
-                class="form-control"
-                type="file"
+              <textarea
+                className="form-control"
+                name="scenario"
                 id="scenario"
-                {...register("scenario", { required: false })}
-              />
+                cols="30"
+                rows="10"
+              ></textarea>
             </div>
 
             <div className="contact__FormField mb-3">
-              <label htmlFor="extra" class="form-label">
+              <label htmlFor="extra" className="form-label">
                 {lang ? "추가의" : "Additional"}
               </label>
-              <input
-                class="form-control"
-                type="file"
+              <textarea
+                className="form-control"
+                name="extra"
                 id="extra"
-                {...register("extra", { required: false })}
-              />
+                cols="30"
+                rows="5"
+              ></textarea>
             </div>
 
             <div className="mb-3 contact__FormField">
-              <label htmlFor="exampleFormControlTextarea1" class="form-label">
+              <label htmlFor="summary" className="form-label">
                 {lang
                   ? "요약 및 추가 정보입니다."
                   : "Summary and Extra Information"}
@@ -192,7 +182,7 @@ const ContactProposal = () => {
               <textarea
                 className="form-control"
                 rows="3"
-                {...register("summary", { required: true })}
+                name="summary"
               ></textarea>
             </div>
           </div>
@@ -205,12 +195,11 @@ const ContactProposal = () => {
                 className="form-check-input"
                 type="checkbox"
                 name="consent"
-                value=""
+                defaultValue=""
                 id="flexCheckDefault"
-                {...register("consent", { required: true })}
               />
 
-              <label className="form-check-label" for="flexCheckDefault">
+              <label className="form-check-label" htmlFor="flexCheckDefault">
                 {lang
                   ? "개인정보 수집 및 이용에 동의합니다."
                   : "I agree to the collection and use of personal information."}
@@ -222,7 +211,7 @@ const ContactProposal = () => {
               <input
                 className="btn btn-secondary"
                 type="submit"
-                value={lang ? "제출해요" : "Submit"}
+                defaultValue={lang ? "제출해요" : "Submit"}
               />
             </div>
           </div>

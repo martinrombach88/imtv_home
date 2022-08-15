@@ -10,11 +10,11 @@ import NewsArticleView from "./components/News/NewsArticleView.js";
 import About from "./components/About/About.js";
 import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
-// import ContactProposal from "./components/Contact/ContactProposal.js";
-// import ContactInquiry from "./components/Contact/ContactInquiry.js";
+import ContactProposal from "./components/Contact/ContactProposal.js";
+import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
-
+import SubmittedForm from "./components/Contact/SubmittedForm";
 import localWorkList from "./components/Work/localWorkList";
 import localStaffList from "./components/localStaffList";
 import localNewsList from "./components/localNewsList";
@@ -103,9 +103,10 @@ function App() {
         <Route path="news" element={<News list={newsList} />} />
         <Route path="news_article" element={<NewsArticleView />} />
         <Route path="contact" element={<Contact />} />
-        {/* <Route path="proposal" element={<ContactProposal />} />
-        <Route path="inquiry" element={<ContactInquiry />} /> */}
+        <Route path="proposal" element={<ContactProposal />} />
+        <Route path="inquiry" element={<ContactInquiry />} />
         <Route path="video" element={<VideoPlayer />} />
+        <Route path="submitted" element={<SubmittedForm />} />
       </Routes>
     </LangProvider>
   );
