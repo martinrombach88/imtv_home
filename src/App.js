@@ -15,9 +15,9 @@ import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
-import localWorkList from "./components/Work/localWorkList";
-import localStaffList from "./components/localStaffList";
-import localNewsList from "./components/localNewsList";
+// import localWorkList from "./components/Work/localWorkList";
+// import localStaffList from "./components/localStaffList";
+// import localNewsList from "./components/localNewsList";
 
 function App() {
   const [workObject, setWorkObject] = useState(null);
