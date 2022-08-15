@@ -10,27 +10,11 @@
   padding: 1% 0%;
 }
 
-.footer,
-.header {
+.header,
+.footer {
   background: #101010;
   color: rgb(214, 214, 214);
 }
-
-
-
-/* .footer__ArrowDiv {
-  background: #101010;
-  color: rgb(214, 214, 214);
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.footer__Arrow {
-  position: absolute;
-  bottom: 20%;
-} */
 
 .initialPos {
   position: initial;

@@ -1,5 +1,5 @@
 //For SQL
-// import { React, useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home.js";
@@ -12,11 +12,12 @@ import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
+import { LangProvider } from "./components/Header/LangContext";
+import "./components/SnapScroll/SnapScroll.css";
+
 import localWorkList from "./components/Work/localWorkList";
 import localStaffList from "./components/localStaffList";
 import localNewsList from "./components/localNewsList";
-import { LangProvider } from "./components/Header/LangContext";
-import "./components/SnapScroll/SnapScroll.css";
 
 function App() {
   // const [workObject, setWorkObject] = useState(null);
@@ -51,7 +52,6 @@ function App() {
   //   fetchWorkData();
   // }, []);
 
-  //When backend is ready - uncomment.
   // let workList = workObject ? workObject.workItems : null;
   // let newsList = [];
   // if (newsObject) {
@@ -67,15 +67,17 @@ function App() {
   //       titleENG: item.titleENG,
   //       titleKR: item.titleKR,
   //     };
-  //     newsList.push(newItem);
+  //     newsList.unshift(newItem);
   //   }
   // } else {
   //   newsList = null;
   // }
   // let staffList = staffObject ? staffObject.staffItems : null;
+
   let workList = localWorkList;
   let newsList = localNewsList;
   let staffList = localStaffList;
+
   return (
     <LangProvider>
       <Routes>
@@ -89,8 +91,8 @@ function App() {
         <Route path="news" element={<News list={newsList} />} />
         <Route path="news_article" element={<NewsArticleView />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="proposal" element={<ContactProposal />} />
-        <Route path="inquiry" element={<ContactInquiry />} />
+        {/* <Route path="proposal" element={<ContactProposal />} />
+        <Route path="inquiry" element={<ContactInquiry />} /> */}
         <Route path="video" element={<VideoPlayer />} />
       </Routes>
     </LangProvider>

@@ -1,9 +1,14 @@
 import ReactPlayer from "react-player";
+import { useSearchParams } from "react-router-dom";
 import "./VideoPlayer.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const VideoPlayer = () => {
-  const { state } = useLocation();
+  const state = "state";
+  const [searchParams, setSearchParams] = useSearchParams();
+  const search = useLocation().search;
+  const url = new URLSearchParams(search).get("url");
+
   const navigate = useNavigate();
   const x = (
     <svg
@@ -16,7 +21,7 @@ const VideoPlayer = () => {
     >
       <path d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z" />
       <path
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"
       />
     </svg>
@@ -25,7 +30,7 @@ const VideoPlayer = () => {
     <div className="video__Bg">
       <ReactPlayer
         style={{ backgroundColor: "black", margin: 0, padding: 0 }}
-        url={state.fullVid}
+        url={url}
         playing={true}
         controls={true}
         loop={false}

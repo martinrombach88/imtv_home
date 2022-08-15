@@ -5,6 +5,7 @@ import { Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import Arrow from "../Arrow/Arrow";
+import { Link } from "react-router-dom";
 
 //Failed to execute 'postMessage' on 'DOMWindow': The target origin provided
 //('https://www.youtube.com') does not match the recipient window's origin
@@ -22,33 +23,38 @@ const VideoSlider = ({ workList }) => {
       sliderVids.push(work);
     }
   }
-
+  //onClick={() => navigate("/video", { state: sliderVid })}
   return (
     <div className="carousel__Container">
       <Carousel>
         {sliderVids.map((sliderVid) => {
+          let vid = { vid: sliderVid.fullVid };
           return (
             <Carousel.Item key={sliderVid.id}>
-              <ReactPlayer
-                url={sliderVid.clipVid}
-                playing={true}
-                controls={false}
-                loop={true}
-                muted={true}
-                height="125vh"
-                width="100%"
-                config={{
-                  youtube: {
-                    controls: 0,
-                  },
-                }}
-              />
-              <Carousel.Caption
-                bsPrefix="carousel__Details"
-                onClick={() => navigate("/video", { state: sliderVid })}
+              <Link
+                className="carousel__Link"
+                to={{ pathname: "/video?url=" + sliderVid.fullVid }}
+                target="_blank"
               >
-                <h1>{lang ? sliderVid.titleKR : sliderVid.titleENG}</h1>
-              </Carousel.Caption>
+                <ReactPlayer
+                  url={sliderVid.clipVid}
+                  playing={true}
+                  controls={false}
+                  loop={true}
+                  muted={true}
+                  height="125vh"
+                  width="100%"
+                  config={{
+                    youtube: {
+                      controls: 0,
+                    },
+                  }}
+                />
+
+                <Carousel.Caption bsPrefix="carousel__Details">
+                  <h1>{lang ? sliderVid.titleKR : sliderVid.titleENG}</h1>
+                </Carousel.Caption>
+              </Link>
             </Carousel.Item>
           );
         })}

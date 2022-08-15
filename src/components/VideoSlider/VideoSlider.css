@@ -26,6 +26,14 @@
   color: rgb(255, 255, 255);
 }
 
+.carousel__Link {
+  color: rgb(255, 255, 255);
+}
+
+.carousel__Link:hover {
+  color: rgb(211, 211, 211);
+}
+
 .carousel__Details {
   position: absolute;
   width: 100vw;
