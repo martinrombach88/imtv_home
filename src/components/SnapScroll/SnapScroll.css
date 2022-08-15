@@ -106,9 +106,6 @@
   display: none;
 }
 @media (max-width: 650px) {
-  .snapScroll__Image {
-    display: none;
-  }
   .snapScroll__ImageMobile {
     padding-top: 10%;
     display: flex;
