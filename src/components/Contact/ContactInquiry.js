@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import { useRef } from "react";
+import dotenv from "dotenv/config";
 import "./Contact.css";
 
 const ContactInquiry = () => {

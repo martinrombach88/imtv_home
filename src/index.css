@@ -27,6 +27,12 @@ body {
   width: 100%;
 }
 
+@media (max-width: 650px) {
+  .footer {
+    display: none;
+  }
+}
+
 .footer p {
   margin: 0;
 }
