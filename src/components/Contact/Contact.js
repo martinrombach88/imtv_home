@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import "./Contact.css";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
+
 const Contact = () => {
   const lang = useLang();
   const navigate = useNavigate();
