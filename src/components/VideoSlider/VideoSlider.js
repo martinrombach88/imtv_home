@@ -2,7 +2,6 @@ import "./VideoSlider.css";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactPlayer from "react-player";
 import { Carousel } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import Arrow from "../Arrow/Arrow";
 import { Link } from "react-router-dom";
@@ -16,7 +15,6 @@ import { Link } from "react-router-dom";
 
 const VideoSlider = ({ workList }) => {
   const lang = useLang();
-  const navigate = useNavigate();
   const sliderVids = [];
   for (let work of workList) {
     if (work.clipVid !== "") {
@@ -28,7 +26,6 @@ const VideoSlider = ({ workList }) => {
     <div className="carousel__Container">
       <Carousel>
         {sliderVids.map((sliderVid) => {
-          let vid = { vid: sliderVid.fullVid };
           return (
             <Carousel.Item key={sliderVid.id}>
               <Link

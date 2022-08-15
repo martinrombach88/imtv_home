@@ -1,5 +1,5 @@
 //For SQL
-import { React, useState, useEffect } from "react";
+// import { React, useState, useEffect } from "react";
 
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home.js";
@@ -10,14 +10,26 @@ import NewsArticleView from "./components/News/NewsArticleView.js";
 import About from "./components/About/About.js";
 import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
-import ContactProposal from "./components/Contact/ContactProposal.js";
-import ContactInquiry from "./components/Contact/ContactInquiry.js";
+// import ContactProposal from "./components/Contact/ContactProposal.js";
+// import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 
 import localWorkList from "./components/Work/localWorkList";
 import localStaffList from "./components/localStaffList";
 import localNewsList from "./components/localNewsList";
+
+// 10:53:35 AM:   Line 2:17:  'useState' is defined but never used         no-unused-vars
+// 10:53:35 AM:   Line 2:27:  'useEffect' is defined but never used        no-unused-vars
+// 10:53:35 AM:   Line 13:8:  'ContactProposal' is defined but never used  no-unused-vars
+// 10:53:35 AM:   Line 14:8:  'ContactInquiry' is defined but never used   no-unused-vars
+// 10:53:35 AM: src/components/VideoPlayer/VideoPlayer.js
+// 10:53:35 AM:   Line 7:9:   'state' is assigned a value but never used            no-unused-vars
+// 10:53:35 AM:   Line 8:10:  'searchParams' is assigned a value but never used     no-unused-vars
+// 10:53:35 AM:   Line 8:24:  'setSearchParams' is assigned a value but never used  no-unused-vars
+// 10:53:35 AM: src/components/VideoSlider/VideoSlider.js
+// 10:53:35 AM:   Line 19:9:   'navigate' is assigned a value but never used  no-unused-vars
+// 10:53:35 AM:   Line 31:15:  'vid' is assigned a value but never used       no-unused-vars
 
 function App() {
   // const [workObject, setWorkObject] = useState(null);
