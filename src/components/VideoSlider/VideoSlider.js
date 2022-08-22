@@ -21,7 +21,7 @@ const VideoSlider = ({ workList }) => {
       sliderVids.push(work);
     }
   }
-  //onClick={() => navigate("/video", { state: sliderVid })}
+
   return (
     <div className="carousel__Container">
       <Carousel>

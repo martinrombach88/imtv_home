@@ -20,6 +20,7 @@ const localNewsList = [
       "Jeon Seong-woo takes on the role of Woo Seong-jae. After the asteroid incident was announced, he became an assistant priest overnight in place of the priest who disappeared. He is confused by various rumors and takes care of the followers. Kim Yun-hye was cast for the role of Kang In-ah. As the commander of a combat service support battalion, In-ah travels around the ruins of Ungcheon-si to transport supplies and maintain security. Before the scheduled end 200 days later, characters in different positions face the end of their lives with their own beliefs and choices. It raises curiosity.",
       "'The Fool of the End' is a collaboration between director Kim Jin-min of 'Human Lessons' and 'My Name' and writer Jeong Seong-ju of 'Secret Meeting'. The lineup of luxury supporting actors will also be released. Meanwhile, the production company, IMTV, will present six drama series over 22 and 23 years in addition to the Netflix series 'The Fool of the End' to viewers around the world through broadcasters and OTT platforms at home and abroad.",
     ],
+    inProduction: "0",
   },
   {
     id: 2,
@@ -43,6 +44,7 @@ const localNewsList = [
       "Unlike other dystopian genre films that depict the post-apocalyptic society, <The Fool of the End> contains the landscape of a society that is about to end. And the Korean Peninsula is included in the direct impact zone. The Republic of Korea is quickly plunged into chaos, and people make every effort to leave the Republic of Korea and escape to a safe place. In the face of the catastrophe of an asteroid impact, what choices and lives are left for those left behind? <Apocalypse Fool>, which tells the story of the end of the world from a different perspective, realistically depicts the psychological descriptions and social phenomena of people who are nearing the end of their homeland, is directed by Kim Jin-min, director of <Human Class> and <My Name>. He takes on directing and works with Netflix for the third time. Expectations are high for the dystopian worldview that Kim Jin-min, who has shown off, will draw. The screenplay for <The Fool of the End> was written by Seong-Joo Jeong, who caused a sensation with the drama [Secret Meeting]. ], and <The End of the Fool>, which made a special meeting between veteran writer Jeong Seong-ju and director Kim Jin-min, who have demonstrated sharp depictions of reality and solid writing skills in each work, is the drama [Spy], [The World Again], [That Man Oh-su], etc. Produced by IMTV, which produced.",
       "The Fool of the End, which is drawing keen interest as to the outcome of the meeting between director Kim Jin-min and writer Jeong Seong-ju, can only be seen on Netflix.",
     ],
+    inProduction: "1",
   },
   {
     id: 3,
@@ -66,6 +68,7 @@ const localNewsList = [
       "Despite the Corona situation, business conferences to communicate with the industry were held smoothly, and we were able to sign a contract with the Butterfly Club,” said Lee Sang-hyun, vice president of IMTV. said.",
       "Meanwhile, IMTV also signed a contract for the rights to video production of 'My Mother Lives in My House' written by Bae Jung-hee with Quiet ENT.",
     ],
+    inProduction: "0",
   },
   {
     id: 4,
@@ -93,6 +96,7 @@ const localNewsList = [
       "Finally, Kim Seul-gi said, “I would be grateful if you could watch the drama in a pleasant, refreshing, cool way. There are a lot of very interesting scenes hidden. I hope the viewers will also have a lot of fun”, Song Ji-eun said, “I am so excited because I filmed happily with interesting friends. I hope viewers will receive emotions and energy as well. Please make sure to watch the first episode,” Joo-woo said, “It was so much fun and enjoyable to meet viewers today”, and Kang Yul said, “I haven’t even seen the show yet. But the person who watched the show first I'm looking forward to hearing reviews from people saying it's so fun. I'm sure it will be a cool debut for KT's summer drama collage. I think viewers can also look forward to it.",
       "'Shh! Take care of that guy' was produced by IMTV, who produced OCN's 'That Man Oh Soo', SBS' 'Reunited World', and KBS' 'Spy'. Also, the movie 'Mr. Idol' and 'Catch Me' Writer Lee Gyu-bok (Pen name: Ja-in), who wrote , and Hwang Ji-eon (pen name: Bang Sa-rang), who wrote the drama 'Exo Lives Next Door', is co-writing the book, while SBS 'Suspicious Mother-in-law', SBS 'Miss Ma: Revenge SBS Medianet director Lee Jeong-hoon, who directed ‘Goddess’, etc. caught the megaphone ‘Shh! Take care of him! ' is the first work of '2021 KT Summer Drama Collage', which reveals novel new dramas in various genres carefully selected by KT. The project name 'Summer Drama Collage' is an art technique Collage created by pasting various materials. ) has the meaning of presenting dramas of various genres.",
     ],
+    inProduction: "0",
   },
   {
     id: 5,
@@ -120,6 +124,7 @@ const localNewsList = [
       "In the second part, 'Cat, Coming to Human Side', which will be broadcast on April 3 (Sat), we talk about how humans and cats coexist beautifully. Cats have two names: stray cats and domestic cats. Cats' fates are markedly different depending on the name they are given. A stray cat is a street scoundrel, and a house cat is considered a life-dividing cat. Probably no other animal has a history of spectacular twists and turns in its relationship with humans as much as a cat. In ancient Egypt, cats were also worshiped as gods, and in the Middle Ages, they were considered equivalent to witches and were slaughtered. And since the Middle Ages, prejudiced views on cats still remain. 'I feel bad', 'It's scary', etc. And cats that are ignored and even trampled on just because they don't like it. It is ironic that more and more cats are abandoned in the unprecedented cat craze. They went back and forth between hell and hell, and they are still called by two different names, and even their survival is threatened. Find the answer to how humans and cats living in the same space coexist.",
       "JTBC's 'Factual' Bernard Werber's cat dictionary was jointly produced by IMTV, a famous Korean documentary producer, and French Galaxy, over two years, and is also a work supported by the Korea Radio Agency for international co-production. In France, it will be released in 2021. It will be broadcast on Canal Group's C8 channel in December.",
     ],
+    inProduction: "0",
   },
 ];
 

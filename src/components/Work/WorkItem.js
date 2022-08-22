@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
+import { Link } from "react-router-dom";
+
+/*
+  <Link
+    className="carousel__Link"
+    to={{ pathname: "/video?url=" + sliderVid.fullVid }}
+    target="_blank"
+  >
+*/
+
+// onClick={() => navigate("/video", { state: workItem })}
 
 const WorkItem = (work) => {
   let workItem = work.work;
@@ -65,12 +76,13 @@ const WorkItem = (work) => {
                 workItem.writerENG}
           </li>
         </ul>
-        <button
+        <Link
           className="btn btn-outline-light"
-          onClick={() => navigate("/video", { state: workItem })}
+          to={{ pathname: "/video?url=" + workItem.fullVid }}
+          target="_blank"
         >
           <h5>{lang ? "예고편 보기" : "Watch Trailer"}</h5>
-        </button>
+        </Link>
       </div>
     </div>
   );

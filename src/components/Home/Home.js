@@ -11,11 +11,18 @@ function Home({ workList, list }) {
   let homeWorkList = workList ? workList : null;
 
   if ((newsList, homeWorkList)) {
-    // let newsArticle = newsList ? newsList[0] : null;
-    let inProduction = null;
+    let inProductionMedia = null;
+    let inProductionArticle = null;
+
     for (let item of homeWorkList) {
       if (item.inProduction === "1") {
-        inProduction = item;
+        inProductionMedia = item;
+      }
+    }
+
+    for (let item of newsList) {
+      if (item.inProduction === "1") {
+        inProductionArticle = item;
       }
     }
 
@@ -32,9 +39,10 @@ function Home({ workList, list }) {
               bottomtitleKR: "프로젝트 보기",
               bottomtitleENG: "View Project",
             }}
-            object={inProduction}
-            article={newsList[0]}
+            object={inProductionMedia}
+            article={inProductionArticle}
           />
+
           <SnapScroll
             hCase="showcaseComponent"
             component={<News list={newsList} home={true} />}
