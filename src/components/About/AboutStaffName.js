@@ -2,28 +2,49 @@ import { useLang } from "../Header/LangContext";
 
 const AboutStaffName = ({ name, setProfile }) => {
   const lang = useLang();
-  const infoKRSplit = name.infoKR.split("-");
-  const infoENGSplit = name.infoENG.split("-");
 
-  const infoListKR = infoKRSplit.map((info, index) => {
-    return <li key={index}>{info}</li>;
-  });
-  const infoListENG = infoENGSplit.map((info, index) => {
-    return <li key={index}>{info}</li>;
-  });
+  const infoListKR = (
+    <ul className="about__StaffList">
+      <li>{name.infoKR1}</li>
+      <li>{name.infoKR2}</li>
+      <li>{name.infoKR3}</li>
+      <li>{name.infoKR4}</li>
+      <li>{name.infoKR5}</li>
+      <li>{name.infoKR6}</li>
+      <li>{name.infoKR7}</li>
+      <li>{name.infoKR8}</li>
+      <li>{name.infoKR9}</li>
+      <li>{name.infoKR10}</li>
+    </ul>
+  );
+
+  const infoListENG = (
+    <ul className="about__StaffList">
+      <li>{name.infoENG1}</li>
+      <li>{name.infoENG2}</li>
+      <li>{name.infoENG3}</li>
+      <li>{name.infoENG4}</li>
+      <li>{name.infoENG5}</li>
+      <li>{name.infoENG6}</li>
+      <li>{name.infoENG7}</li>
+      <li>{name.infoENG8}</li>
+      <li>{name.infoENG9}</li>
+      <li>{name.infoENG10}</li>
+    </ul>
+  );
 
   const fullProfileKR = (
     <div>
       <h2 className="about__StaffContentHeader">{name.nameKR}</h2>
       <h2>{name.titleKR}</h2>
-      <ul className="about__StaffList">{infoListKR}</ul>
+      {infoListKR}
     </div>
   );
   const fullProfileENG = (
     <div>
       <h2 className="about__StaffContentHeader">{name.nameENG}</h2>
       <h2>{name.titleENG}</h2>
-      <ul className="about__StaffList">{infoListENG}</ul>
+      {infoListENG}
     </div>
   );
 

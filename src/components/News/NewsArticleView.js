@@ -9,13 +9,27 @@ const NewsArticleView = () => {
   const article = state.state.article;
   const lang = useLang();
 
-  const body = lang
-    ? article.bodyKR.map((newsParagraph, index) => {
-        return <p key={index}>{newsParagraph}</p>;
-      })
-    : article.bodyENG.map((newsParagraph, index) => {
-        return <p key={index}>{newsParagraph}</p>;
-      });
+  const body = lang ? (
+    <>
+      <p>{article.bodyKR1}</p>
+      <p>{article.bodyKR2}</p>
+      <p>{article.bodyKR3}</p>
+      <p>{article.bodyKR4}</p>
+      <p>{article.bodyKR5}</p>
+      <p>{article.bodyKR6}</p>
+      <p>{article.bodyKR7}</p>
+    </>
+  ) : (
+    <>
+      <p>{article.bodyENG1}</p>
+      <p>{article.bodyENG2}</p>
+      <p>{article.bodyENG3}</p>
+      <p>{article.bodyENG4}</p>
+      <p>{article.bodyENG5}</p>
+      <p>{article.bodyENG6}</p>
+      <p>{article.bodyENG7}</p>
+    </>
+  );
   return (
     <div className="scroll">
       <Header headerStyle={"header initialPos"} />

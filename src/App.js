@@ -14,9 +14,9 @@ import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
-import localWorkList from "./components/Work/localWorkList";
-import localStaffList from "./components/localStaffList";
-import localNewsList from "./components/localNewsList";
+// import localWorkList from "./components/Work/localWorkList";
+// import localStaffList from "./components/localStaffList";
+// import localNewsList from "./components/localNewsList";
 
 function App() {
   const [workObject, setWorkObject] = useState(null);
@@ -57,8 +57,20 @@ function App() {
     for (let item of newsObject.newsItems) {
       let newItem = {
         id: item.id,
-        bodyKR: item.bodyKR.split("~"),
-        bodyENG: item.bodyENG.split("~"),
+        bodyKR1: item.bodyKR1 ? item.bodyKR1 : "",
+        bodyKR2: item.bodyKR2 ? item.bodyKR2 : "",
+        bodyKR3: item.bodyKR3 ? item.bodyKR3 : "",
+        bodyKR4: item.bodyKR4 ? item.bodyKR4 : "",
+        bodyKR5: item.bodyKR5 ? item.bodyKR5 : "",
+        bodyKR6: item.bodyKR6 ? item.bodyKR6 : "",
+        bodyKR7: item.bodyKR7 ? item.bodyKR7 : "",
+        bodyENG1: item.bodyENG1 ? item.bodyENG1 : "",
+        bodyENG2: item.bodyENG2 ? item.bodyENG2 : "",
+        bodyENG3: item.bodyENG3 ? item.bodyENG3 : "",
+        bodyENG4: item.bodyENG4 ? item.bodyENG4 : "",
+        bodyENG5: item.bodyENG5 ? item.bodyENG5 : "",
+        bodyENG6: item.bodyENG6 ? item.bodyENG6 : "",
+        bodyENG7: item.bodyENG7 ? item.bodyENG7 : "",
         dateENG: item.dateENG,
         dateKR: item.dateKR,
         image: item.image,
