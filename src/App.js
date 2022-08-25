@@ -14,81 +14,81 @@ import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
-// import localWorkList from "./components/Work/localWorkList";
-// import localStaffList from "./components/localStaffList";
-// import localNewsList from "./components/localNewsList";
+import localWorkList from "./components/Work/localWorkList";
+import localStaffList from "./components/localStaffList";
+import localNewsList from "./components/localNewsList";
 
 function App() {
-  const [workObject, setWorkObject] = useState(null);
-  const [newsObject, setNewsObject] = useState(null);
-  const [staffObject, setStaffObject] = useState(null);
+  // const [workObject, setWorkObject] = useState(null);
+  // const [newsObject, setNewsObject] = useState(null);
+  // const [staffObject, setStaffObject] = useState(null);
 
-  useEffect(() => {
-    const fetchNewsData = () => {
-      fetch("http://localhost:8080/getnews")
-        .then((response) => response.json())
-        .then((result) => {
-          setNewsObject(result);
-        })
-        .catch((error) => console.log("An error occurred"));
-    };
+  // useEffect(() => {
+  //   const fetchNewsData = () => {
+  //     fetch("http://localhost:8080/getnews")
+  //       .then((response) => response.json())
+  //       .then((result) => {
+  //         setNewsObject(result);
+  //       })
+  //       .catch((error) => console.log("An error occurred"));
+  //   };
 
-    const fetchStaffData = () => {
-      fetch("http://localhost:8080/getstaff")
-        .then((response) => response.json())
-        .then((result) => setStaffObject(result))
-        .catch((error) => console.log("An error occurred"));
-    };
+  //   const fetchStaffData = () => {
+  //     fetch("http://localhost:8080/getstaff")
+  //       .then((response) => response.json())
+  //       .then((result) => setStaffObject(result))
+  //       .catch((error) => console.log("An error occurred"));
+  //   };
 
-    const fetchWorkData = () => {
-      fetch("http://localhost:8080/getwork")
-        .then((response) => response.json())
-        .then((result) => setWorkObject(result))
-        .catch((error) => console.log("An error occurred"));
-    };
-    fetchNewsData();
-    fetchStaffData();
-    fetchWorkData();
-  }, []);
+  //   const fetchWorkData = () => {
+  //     fetch("http://localhost:8080/getwork")
+  //       .then((response) => response.json())
+  //       .then((result) => setWorkObject(result))
+  //       .catch((error) => console.log("An error occurred"));
+  //   };
+  //   fetchNewsData();
+  //   fetchStaffData();
+  //   fetchWorkData();
+  // }, []);
 
-  let workList = workObject ? workObject.workItems : null;
-  let newsList = [];
-  if (newsObject) {
-    for (let item of newsObject.newsItems) {
-      let newItem = {
-        id: item.id,
-        bodyKR1: item.bodyKR1 ? item.bodyKR1 : "",
-        bodyKR2: item.bodyKR2 ? item.bodyKR2 : "",
-        bodyKR3: item.bodyKR3 ? item.bodyKR3 : "",
-        bodyKR4: item.bodyKR4 ? item.bodyKR4 : "",
-        bodyKR5: item.bodyKR5 ? item.bodyKR5 : "",
-        bodyKR6: item.bodyKR6 ? item.bodyKR6 : "",
-        bodyKR7: item.bodyKR7 ? item.bodyKR7 : "",
-        bodyENG1: item.bodyENG1 ? item.bodyENG1 : "",
-        bodyENG2: item.bodyENG2 ? item.bodyENG2 : "",
-        bodyENG3: item.bodyENG3 ? item.bodyENG3 : "",
-        bodyENG4: item.bodyENG4 ? item.bodyENG4 : "",
-        bodyENG5: item.bodyENG5 ? item.bodyENG5 : "",
-        bodyENG6: item.bodyENG6 ? item.bodyENG6 : "",
-        bodyENG7: item.bodyENG7 ? item.bodyENG7 : "",
-        dateENG: item.dateENG,
-        dateKR: item.dateKR,
-        image: item.image,
-        imageLarge: item.imageLarge,
-        titleENG: item.titleENG,
-        titleKR: item.titleKR,
-        inProduction: item.inProduction,
-      };
-      newsList.unshift(newItem);
-    }
-  } else {
-    newsList = null;
-  }
-  let staffList = staffObject ? staffObject.staffItems : null;
+  // let workList = workObject ? workObject.workItems : null;
+  // let newsList = [];
+  // if (newsObject) {
+  //   for (let item of newsObject.newsItems) {
+  //     let newItem = {
+  //       id: item.id,
+  //       bodyKR1: item.bodyKR1 ? item.bodyKR1 : "",
+  //       bodyKR2: item.bodyKR2 ? item.bodyKR2 : "",
+  //       bodyKR3: item.bodyKR3 ? item.bodyKR3 : "",
+  //       bodyKR4: item.bodyKR4 ? item.bodyKR4 : "",
+  //       bodyKR5: item.bodyKR5 ? item.bodyKR5 : "",
+  //       bodyKR6: item.bodyKR6 ? item.bodyKR6 : "",
+  //       bodyKR7: item.bodyKR7 ? item.bodyKR7 : "",
+  //       bodyENG1: item.bodyENG1 ? item.bodyENG1 : "",
+  //       bodyENG2: item.bodyENG2 ? item.bodyENG2 : "",
+  //       bodyENG3: item.bodyENG3 ? item.bodyENG3 : "",
+  //       bodyENG4: item.bodyENG4 ? item.bodyENG4 : "",
+  //       bodyENG5: item.bodyENG5 ? item.bodyENG5 : "",
+  //       bodyENG6: item.bodyENG6 ? item.bodyENG6 : "",
+  //       bodyENG7: item.bodyENG7 ? item.bodyENG7 : "",
+  //       dateENG: item.dateENG,
+  //       dateKR: item.dateKR,
+  //       image: item.image,
+  //       imageLarge: item.imageLarge,
+  //       titleENG: item.titleENG,
+  //       titleKR: item.titleKR,
+  //       inProduction: item.inProduction,
+  //     };
+  //     newsList.unshift(newItem);
+  //   }
+  // } else {
+  //   newsList = null;
+  // }
+  // let staffList = staffObject ? staffObject.staffItems : null;
 
-  // let workList = localWorkList;
-  // let newsList = localNewsList;
-  // let staffList = localStaffList;
+  let workList = localWorkList;
+  let newsList = localNewsList;
+  let staffList = localStaffList;
 
   return (
     <LangProvider>
