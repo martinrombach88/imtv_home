@@ -39,8 +39,13 @@ const VideoSlider = ({ workList }) => {
                   height="125vh"
                   width="100%"
                   config={{
-                    vimeo: {
+                    youtube: {
                       controls: 0,
+                    },
+                    file: {
+                      attributes: {
+                        crossOrigin: "true",
+                      },
                     },
                   }}
                 />

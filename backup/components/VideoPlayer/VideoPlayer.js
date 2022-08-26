@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
 import "./VideoPlayer.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 const VideoPlayer = () => {
   const search = useLocation().search;
   const url = new URLSearchParams(search).get("url");
@@ -45,9 +45,9 @@ const VideoPlayer = () => {
           },
         }}
       />
-      <Link className="video__Exit" to={{ pathname: "/" }}>
+      <p className="video__Exit" onClick={() => navigate(-1)}>
         {x}
-      </Link>
+      </p>
     </div>
   );
 };

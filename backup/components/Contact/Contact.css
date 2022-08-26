@@ -1,0 +1,142 @@
+.contact {
+  background-color: rgb(244, 246, 248);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 10%;
+}
+
+.contact h2 {
+  font-weight: 800;
+}
+
+.contact__Label {
+  font-size: 0.9vw;
+}
+
+.contact__Buttons {
+  width: 60%;
+  display: flex;
+  margin: 2%;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  .contact__Buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__Buttons button {
+    margin: 2%;
+  }
+}
+
+.contact__General {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__Details {
+  display: flex;
+  width: 80%;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 650px) {
+  .contact__Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.contact__Details h5 {
+  padding: 2%;
+}
+
+.contact__Map {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__MapMobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .contact__Map {
+    display: none;
+  }
+
+  .contact__MapMobile {
+    display: flex;
+    padding: 5%;
+  }
+}
+
+.contact__formDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__FormField {
+  padding: 2%;
+  width: 60%;
+}
+
+.contact__GenderField {
+  padding-bottom: 2%;
+}
+
+.contact__FormHeader {
+  padding: 2%;
+  width: 100%;
+  text-align: center;
+}
+
+.contact__FormInfo {
+  padding: 0% 5%;
+}
+
+.contact__FormInfo p {
+  margin: 0.5% 0%;
+}
+
+.contact__InfoHeader,
+.contact__FormSubmit {
+  text-align: center;
+}
+
+.contact__FormSubmit {
+  padding-bottom: 5%;
+}
+
+.contact__Data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
+.contact__DataPolicy {
+  text-align: center;
+  width: 60%;
+  height: 150px;
+  margin: 2%;
+  border: black 1px solid;
+}
+
+.submitted {
+  background-color: rgb(244, 246, 248);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

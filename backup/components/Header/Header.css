@@ -1,0 +1,152 @@
+.header {
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2w;
+  width: 100%;
+  padding: 1% 0%;
+}
+
+.header,
+.footer {
+  background: #101010;
+  color: rgb(214, 214, 214);
+}
+
+.initialPos {
+  position: initial;
+}
+
+.header__logo {
+  cursor: pointer;
+  display: flex;
+  padding-left: 10%;
+  width: 80%;
+}
+.header__Nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__Lang {
+  display: flex;
+  cursor: pointer;
+  margin-right: 1%;
+}
+
+.header__Lang img:hover {
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.header__Btn,
+.header__MobBtn {
+  background: #101010;
+  color: white;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__Btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -8px;
+  left: 0;
+  color: white;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.header__Btn:hover:after {
+  color: white;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header__Btn:hover {
+  color: white;
+}
+
+.header__Active,
+.header__Inactive,
+.header__LangDivider {
+  padding: 5px;
+}
+
+.header__Active {
+  color: white;
+  border-bottom: 1px white solid;
+}
+
+.header__Inactive {
+  color: rgb(185, 185, 185);
+  border-bottom: 1px rgb(0, 0, 0) solid;
+}
+
+.header__Btn:active,
+.header__logo:active,
+.header__LangImages img:active,
+.header__Toggle:active {
+  transform: translateY(5%);
+}
+
+.header__Toggle {
+  cursor: pointer;
+}
+.header__Mob {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .header__Web {
+    display: none;
+  }
+  .header__Mob {
+    display: flex;
+  }
+}
+
+.header__MobNav {
+  background: #101010;
+  color: rgb(214, 214, 214);
+  padding: 10px;
+  position: relative;
+}
+.header__MobLinksHide {
+  display: none;
+}
+
+.header__MobLinksDisplay {
+  height: 100vh;
+  width: 40vw;
+  z-index: 250;
+  background: #101010;
+  color: rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-around;
+  text-align: center;
+  top: 0%;
+  left: 0%;
+  padding: 0% 0%;
+  outline: none;
+}
+
+.header__MobLinksDisplay button {
+  outline: none;
+}
+
+.header__MobLinksDisplay a:hover,
+.header__MobLinksDisplay button:hover {
+  color: rgb(127, 32, 168);
+}
