@@ -1,7 +1,7 @@
 import ReactPlayer from "react-player";
 import "./VideoPlayer.css";
 import { useLocation, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 const VideoPlayer = () => {
   const search = useLocation().search;
   const url = new URLSearchParams(search).get("url");
@@ -38,6 +38,9 @@ const VideoPlayer = () => {
           youtube: {
             controls: 0,
           },
+          vimeo: {
+            controls: 0,
+          },
           file: {
             attributes: {
               crossOrigin: "true",
@@ -45,9 +48,9 @@ const VideoPlayer = () => {
           },
         }}
       />
-      <p className="video__Exit" onClick={() => navigate(-1)}>
+      <Link className="video__Exit" to={{ pathname: "/" }}>
         {x}
-      </p>
+      </Link>
     </div>
   );
 };

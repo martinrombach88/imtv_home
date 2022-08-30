@@ -1,4 +1,3 @@
-//For SQL
 import { React, useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home.js";
@@ -14,9 +13,6 @@ import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
-// import localWorkList from "./components/Work/localWorkList";
-// import localStaffList from "./components/localStaffList";
-// import localNewsList from "./components/localNewsList";
 
 function App() {
   const [workObject, setWorkObject] = useState(null);
@@ -25,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const fetchNewsData = () => {
-      fetch("http://localhost:8080/getnews")
+      fetch("https://imtv-api.herokuapp.com/getnews")
         .then((response) => response.json())
         .then((result) => {
           setNewsObject(result);
@@ -34,14 +30,14 @@ function App() {
     };
 
     const fetchStaffData = () => {
-      fetch("http://localhost:8080/getstaff")
+      fetch("https://imtv-api.herokuapp.com/getstaff")
         .then((response) => response.json())
         .then((result) => setStaffObject(result))
         .catch((error) => console.log("An error occurred"));
     };
 
     const fetchWorkData = () => {
-      fetch("http://localhost:8080/getwork")
+      fetch("https://imtv-api.herokuapp.com/getwork")
         .then((response) => response.json())
         .then((result) => setWorkObject(result))
         .catch((error) => console.log("An error occurred"));
@@ -52,43 +48,8 @@ function App() {
   }, []);
 
   let workList = workObject ? workObject.workItems : null;
-  let newsList = newsObject ? [] : null;
-  if (newsObject) {
-    for (let item of newsObject.newsItems) {
-      let newItem = {
-        id: item.id,
-        bodyKR1: item.bodyKR1 ? item.bodyKR1 : "",
-        bodyKR2: item.bodyKR2 ? item.bodyKR2 : "",
-        bodyKR3: item.bodyKR3 ? item.bodyKR3 : "",
-        bodyKR4: item.bodyKR4 ? item.bodyKR4 : "",
-        bodyKR5: item.bodyKR5 ? item.bodyKR5 : "",
-        bodyKR6: item.bodyKR6 ? item.bodyKR6 : "",
-        bodyKR7: item.bodyKR7 ? item.bodyKR7 : "",
-        bodyENG1: item.bodyENG1 ? item.bodyENG1 : "",
-        bodyENG2: item.bodyENG2 ? item.bodyENG2 : "",
-        bodyENG3: item.bodyENG3 ? item.bodyENG3 : "",
-        bodyENG4: item.bodyENG4 ? item.bodyENG4 : "",
-        bodyENG5: item.bodyENG5 ? item.bodyENG5 : "",
-        bodyENG6: item.bodyENG6 ? item.bodyENG6 : "",
-        bodyENG7: item.bodyENG7 ? item.bodyENG7 : "",
-        dateENG: item.dateENG,
-        dateKR: item.dateKR,
-        image: item.image,
-        imageLarge: item.imageLarge,
-        titleENG: item.titleENG,
-        titleKR: item.titleKR,
-        inProduction: item.inProduction,
-      };
-      newsList.unshift(newItem);
-    }
-  } else {
-    newsList = null;
-  }
   let staffList = staffObject ? staffObject.staffItems : null;
-
-  // let workList = localWorkList;
-  // let newsList = localNewsList;
-  // let staffList = localStaffList;
+  let newsList = newsObject ? newsObject.newsItems : null;
 
   return (
     <LangProvider>
@@ -105,7 +66,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="proposal" element={<ContactProposal />} />
         <Route path="inquiry" element={<ContactInquiry />} />
-        <Route path="video" element={<VideoPlayer />} />
+        <Route path="video" element={<VideoPlayer backUrl={"/"} />} />
         <Route path="submitted" element={<SubmittedForm />} />
       </Routes>
     </LangProvider>

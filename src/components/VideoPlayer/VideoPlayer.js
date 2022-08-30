@@ -35,19 +35,11 @@ const VideoPlayer = () => {
         width="100%"
         height="99vh"
         config={{
-          youtube: {
+          vimeo: {
             controls: 0,
-          },
-          file: {
-            attributes: {
-              crossOrigin: "true",
-            },
           },
         }}
       />
-      <Link className="video__Exit" to={{ pathname: "/" }}>
-        {x}
-      </Link>
     </div>
   );
 };

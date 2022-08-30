@@ -6,12 +6,12 @@ const AboutPartnersMobile = () => {
       <h1>PARTNERS</h1>
       <img
         className="about__PartnersMobImg"
-        src="assets/images/partners/images/partnerskr1.png"
+        src="/imtv_home/assets/images/partners/images/partnerskr1.png"
         alt="partners"
       />
       <img
         className="about__PartnersMobImg"
-        src="assets/images/partners/images/partnersworld.png"
+        src="/imtv_home/assets/images/partners/images/partnersworld.png"
         alt="partners"
       />
       <Arrow heightClass={"VeryLow"} />

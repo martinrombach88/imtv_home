@@ -50,7 +50,7 @@ const NewsCards = ({ currentPosts, home, pagination }) => {
         >
           <img
             className="news__Image"
-            src={card.image}
+            src={card.image ? card.image : card.imageLarge}
             alt={lang ? card.titleKR : card.titleENG}
           />
           <div>

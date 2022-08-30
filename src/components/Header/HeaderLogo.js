@@ -7,7 +7,7 @@ const HeaderLogo = () => {
       <img
         className="header__logo"
         alt="logo"
-        src="/assets/images/logo.png"
+        src="/imtv_home/assets/images/logo.png"
         onClick={() => navigate("/")}
       ></img>
     </>

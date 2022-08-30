@@ -4,8 +4,8 @@ const aboutList = [
     title: "aboutIntro",
     color: "rgb(221, 221, 221)",
     backgroundColor: "rgb(88, 6, 6)",
-    image: "./assets/images/aboutHeader.png",
-    imageWide: "./assets/images/aboutHeaderMobile.png",
+    image: "/imtv_home/assets/images/aboutHeader.png",
+    imageWide: "/imtv_home/assets/images/aboutHeaderMobile.png",
     mainTitleKR: "ABOUT IMTV",
     subTitleKR:
       "2001년 설립된 (주)아이엠티비는 국내외 방송사와 플랫폼의 신뢰를 바탕으로 지속적으로 성장해 왔습니다. 20년 동안 재능 있는 작가, 제작자 및 감독은 60개 이상의 TV 프로그램, 영화 및 드라마와 100개 이상의 다큐멘터리를 제작했습니다.",

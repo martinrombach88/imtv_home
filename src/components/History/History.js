@@ -74,7 +74,7 @@ const History = () => {
                   ? "[종말의 바보] 현재 생산 중입니다. 이 야심찬 디스토피아 공상 과학 드라마는 넷플릭스와 협력하여 제작되었습니다."
                   : "Currently in production: Fool to the End. This ambitious dystopian sci-fi drama is produced in collaboration with Netflix."
               }
-              src="/assets/images/timeline/fool2022.png"
+              src="/imtv_home/assets/images/timeline/fool2022.png"
             ></ImageEvent>
             <ImageEvent
               date="2021"
@@ -83,7 +83,7 @@ const History = () => {
                   ? "[쉿! 그놈을 부탁해] 출시되었습니다. KT 오리지널 드라마에는 김슬기, 이주우, 송지은, 강율이 출연합니다."
                   : "Shh! Take Care of Him is released. The KT Original drama stars Kim Seul-gi, Lee Joo-woo, Song Ji-eun and Kang Yul."
               }
-              src="/assets/images/timeline/shh2021.png"
+              src="/imtv_home/assets/images/timeline/shh2021.png"
             ></ImageEvent>
             <TextEvent
               date="2019"
@@ -100,7 +100,7 @@ const History = () => {
                   ? "다큐멘터리 차도 삼국지가 KBS, 윈난 TV 차이나와 함께 개봉했습니다."
                   : "Documentary Three Kingdoms of Chado is released in collaboration with KBS and Yunnan TV China."
               }
-              src="/assets/images/timeline/chado2019.jpg"
+              src="/imtv_home/assets/images/timeline/chado2019.jpg"
             ></TextEvent>
             <ImageEvent
               date="2018"
@@ -109,7 +109,7 @@ const History = () => {
                   ? "재희와 황승언 주연의 IMTV 무비 메멘토 모리가 개봉했습니다. 2018 서울 웹페스트 대상을 수상하고 칸 시리즈 페스티벌 본선에 모습을 드러냈습니다."
                   : "IMTV Movie Memento Mori released, starring Jae-hee and Hwang Seung-eon. Winner of the 2018 Seoul Webfest Grand Prize and shown in the finals of the Cannes Series Festival."
               }
-              src="/assets/images/timeline/memento2018.png"
+              src="/imtv_home/assets/images/timeline/memento2018.png"
             ></ImageEvent>
             <ImageEvent
               date="2018"
@@ -118,7 +118,7 @@ const History = () => {
                   ? "[그남자 오수] 출시됩니다. OCN 드라마에는 이종현과 김소은이 출연합니다."
                   : "Mr Osu is released. The OCN Drama stars Lee Jong-hyun and Kim So-eun."
               }
-              src="/assets/images/timeline/osu2018.png"
+              src="/imtv_home/assets/images/timeline/osu2018.png"
             ></ImageEvent>
             <ImageEvent
               date="2017"
@@ -127,7 +127,7 @@ const History = () => {
                   ? "[다시 만난 세계] 출시합니다. SBS 드라마에는 여진구와 이연이 출연합니다."
                   : "Reunited World is released. The SBS drama stars Yeo Jin-goo and Lee Yeoni."
               }
-              src="/assets/images/timeline/reunited2017.png"
+              src="/imtv_home/assets/images/timeline/reunited2017.png"
             ></ImageEvent>
             <ImageEvent
               date="2016"
@@ -136,7 +136,7 @@ const History = () => {
                   ? "[월드 뮤직 - Song of Soul이] 발매되었습니다. 4부작 다큐멘터리는 KBS와 합작으로 만들어졌습니다."
                   : "World Music - Song of Soul is released. The 4 part documentary was made in collaboration with KBS."
               }
-              src="/assets/images/timeline/worldmusic2016.jpg"
+              src="/imtv_home/assets/images/timeline/worldmusic2016.jpg"
             ></ImageEvent>
             <TextEvent
               date="2016"
@@ -161,7 +161,7 @@ const History = () => {
                   ? "스파이는 풀려납니다. KBS 금요 미니시리즈에는 김재중, 배종옥, 유오성이 출연합니다."
                   : "Spy is released. The KBS Friday mini-series stars Kim Jae-joong, Bae Jong-ok and Yoo Oh-sung."
               }
-              src="/assets/images/timeline/spy2015.png"
+              src="/imtv_home/assets/images/timeline/spy2015.png"
             ></ImageEvent>
             <ImageEvent
               date="2015"
@@ -170,7 +170,7 @@ const History = () => {
                   ? "남태현, 김민지, 손진영 주연의 웹 드라마 제로 오클락이 개봉되었습니다. 네이버, MBC Every1과 협업하여 출시되었습니다. "
                   : "Web drama Zero O'Clock is released, starring Nam Tae-hyun, Kim Min-ji and Son Jin-young. Released in collaboration with Naver and MBC Every1. "
               }
-              src="/assets/images/timeline/webdrama2015.png"
+              src="/imtv_home/assets/images/timeline/webdrama2015.png"
             ></ImageEvent>
             <ImageEvent
               date="2014"
@@ -179,7 +179,7 @@ const History = () => {
                   ? "정성석, 이권 주연의 IMTV 영화 <사랑의 추억> 개봉. 부천영화제 폐막작으로 선정됐다."
                   : "IMTV movie Memories of Love released, starring Seong-Suk Jeong and Kwon Lee. The movie was selected to close the Bucheon film festival."
               }
-              src="/assets/images/timeline/memories2014.jpg"
+              src="/imtv_home/assets/images/timeline/memories2014.jpg"
             ></ImageEvent>
             <ImageEvent
               date="2014"
@@ -188,7 +188,7 @@ const History = () => {
                   ? "KBS 어린이 드라마 '요술 두루마리' 개봉. 배우 신기준, 이지우, 천이슬."
                   : "KBS children's drama Magic Scroll is released. Stars Ki-joon Shin, Ji-woo Lee and Lee Seul Cheon."
               }
-              src="/assets/images/timeline/magicscroll2014.jpg"
+              src="/imtv_home/assets/images/timeline/magicscroll2014.jpg"
             ></ImageEvent>
             <ImageEvent
               date="2013"
@@ -197,7 +197,7 @@ const History = () => {
                   ? "KBS 사극 '곡비' 개봉. 배우 김유정, 서준영."
                   : "KBS Period Drama Gokbi is released. Stars Kim Yoo-jung and Seo Jun-young."
               }
-              src="/assets/images/timeline/gokbi2013.jpg"
+              src="/imtv_home/assets/images/timeline/gokbi2013.jpg"
             ></ImageEvent>
             <ImageEvent
               date="2013"
@@ -206,7 +206,7 @@ const History = () => {
                   ? "내셔널지오그래픽 채널에서 공개된 인사이드 K팝 다큐멘터리."
                   : "Inside K-Pop documentary released on National Geographic channels."
               }
-              src="/assets/images/timeline/kpop2013.png"
+              src="/imtv_home/assets/images/timeline/kpop2013.png"
             ></ImageEvent>
             <ImageEvent
               date="2012"
@@ -215,7 +215,7 @@ const History = () => {
                   ? "내셔널 지오그래픽 채널에서 공개된 마스터스 3부작. 박찬욱 감독, 봉준호 감독, 최동훈 감독의 작품을 탐구하는 다큐멘터리."
                   : "Masters Trilogy released on National Geographic Channels. Documentary explores work of directors Park Chan-wook, Bong Joon-ho and Choi Dong-hoon."
               }
-              src="/assets/images/timeline/masters2012.jpg"
+              src="/imtv_home/assets/images/timeline/masters2012.jpg"
             ></ImageEvent>
             <ImageEvent
               date="2011"
@@ -224,7 +224,7 @@ const History = () => {
                   ? "KBS 드라마스페셜 <사망한 아내> 개봉. 드라마 주연 조희봉, 이세은."
                   : "KBS Drama special My Wife Disappeared released. Drama stars Jo Hee-bong and Lee Se-eun."
               }
-              src="/assets/images/timeline/wife2011.jpg"
+              src="/imtv_home/assets/images/timeline/wife2011.jpg"
             ></ImageEvent>
             <TextEvent
               date="2008"
@@ -257,7 +257,7 @@ const History = () => {
                   ? "한국 투 더 월드 - 서울: 그리드의 잠금 해제입니다. 내셔널 지오그래픽과의 특별한 콜라보레이션 프로젝트는 140개국 이상에서 방영됩니다."
                   : "Korea to the World - Seoul: Unlocking the Grid is released. The special collaboration project with National Geographic airs in over 140 countries."
               }
-              src="/assets/images/timeline/natgeo2006.png"
+              src="/imtv_home/assets/images/timeline/natgeo2006.png"
             ></ImageEvent>
             <ImageEvent
               date="2004"
@@ -266,7 +266,7 @@ const History = () => {
                   ? "신화의 비밀 창조물이 공개됩니다.KBS 다큐멘터리는 2005년과 2006년 전경련 대상을 수상하며 총 120부작으로 방영됩니다."
                   : "Secret Creation of Myth is released. The KBS documentary wins the FKI Grand Prize in 2005 and 2006 and airs for a total of 120 episodes."
               }
-              src="/assets/images/timeline/myth2004.jpg"
+              src="/imtv_home/assets/images/timeline/myth2004.jpg"
             ></ImageEvent>
             <ImageEvent
               date="2003"
@@ -275,10 +275,10 @@ const History = () => {
                   ? "KBS 다큐멘터리 생사의 비밀이 공개됐습니다."
                   : "KBS documentary Secret of the Life and Death is released."
               }
-              src="/assets/images/timeline/secret2003.jpg"
+              src="/imtv_home/assets/images/timeline/secret2003.jpg"
             ></ImageEvent>
             <ImageEvent
-              src="/assets/images/timeline/waterislife2002.jpg"
+              src="/imtv_home/assets/images/timeline/waterislife2002.jpg"
               date="2002"
               text={
                 lang

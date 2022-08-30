@@ -1,5 +1,6 @@
 {
   "name": "imtv_home",
+  "homepage": "https://martinrombachdev.com/imtv_home",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +13,9 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
     "bootstrap": "^5.1.3",
+    "express": "^4.18.1",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",

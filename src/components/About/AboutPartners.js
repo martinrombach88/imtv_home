@@ -2,7 +2,7 @@ import Arrow from "../Arrow/Arrow";
 
 const AboutPartners = () => {
   const generateImages = (num) => {
-    let url = "/assets/images/partners/";
+    let url = "/imtv_home/assets/images/partners/";
     let urlArray = [];
     for (let i = 1; i <= num; i++) {
       urlArray.push(url + "p" + i + ".png");

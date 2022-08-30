@@ -3,6 +3,16 @@
   font-family: "Nanum Gothic", sans-serif;
 }
 
+h2,
+h4,
+h5 {
+  font-size: 0.8em;
+}
+
+li {
+  font-size: 0.8em;
+}
+
 html,
 #root {
   background-color: black;
@@ -25,6 +35,7 @@ body {
   position: absolute;
   bottom: 0%;
   width: 100%;
+  font-size: 0.8em;
 }
 
 @media (max-width: 650px) {
