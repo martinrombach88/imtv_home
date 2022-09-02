@@ -20,8 +20,8 @@ function App() {
   const [staffObject, setStaffObject] = useState(null);
 
   useEffect(() => {
-    const fetchNewsData = () => {
-      fetch("https://imtv-api.herokuapp.com/getnews")
+    const fetchNewsData = async () => {
+      await fetch("https://imtv-api.herokuapp.com/getnews")
         .then((response) => response.json())
         .then((result) => {
           setNewsObject(result);
