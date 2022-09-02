@@ -42,6 +42,9 @@ body {
   .footer {
     display: none;
   }
+  .arrow {
+    display: none;
+  }
 }
 
 .footer p {

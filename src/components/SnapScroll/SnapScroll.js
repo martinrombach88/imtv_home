@@ -90,7 +90,7 @@ const SnapScroll = ({
                 </p>
               )}
 
-              <Arrow heightClass={"MidBottom"} />
+              <Arrow heightClass={"MidBottom"} className="homeArrow" />
             </div>
           </div>
         </>

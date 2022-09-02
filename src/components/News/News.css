@@ -73,10 +73,10 @@
     margin-top: 2%;
     object-fit: scale-down;
     width: 70vw;
-
     border-radius: 2%;
   }
 }
+
 .news__Page p {
   color: black;
   cursor: pointer;

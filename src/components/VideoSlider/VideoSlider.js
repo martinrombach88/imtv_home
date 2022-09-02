@@ -53,7 +53,7 @@ const VideoSlider = ({ workList }) => {
           );
         })}
       </Carousel>
-      <Arrow heightClass="Mid" />
+      <Arrow heightClass="Mid" className="home__Arrow" />
     </div>
   );
 };
