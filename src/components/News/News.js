@@ -4,6 +4,7 @@ import "./News.css";
 import { useState } from "react";
 import NewsCards from "./NewsCards";
 import NewsPagination from "./NewsPagination";
+import Arrow from "../Arrow/Arrow";
 
 const News = ({ list, home }) => {
   //Pagination
@@ -16,19 +17,27 @@ const News = ({ list, home }) => {
   const currentPosts = list.slice(indexOfFirstPost, indexOfLastPost);
   if (home) {
     return (
-      <>
+      <div className="snapScroll">
         <NewsCards
           currentPosts={currentPosts}
-          home={home}
-          pagination={
-            <NewsPagination
-              postsPerPage={postsPerPage}
-              totalPosts={list.length}
-              paginate={paginate}
-            />
-          }
-        ></NewsCards>
-      </>
+          cType={"homeImage"}
+          home={true}
+        />
+        <div className="snapScroll__Content">
+          <h4 className="newsHome__Title">NEWS</h4>
+          <NewsCards
+            currentPosts={currentPosts}
+            cType={"homeText"}
+            home={true}
+          />
+          <NewsPagination
+            postsPerPage={postsPerPage}
+            totalPosts={list.length}
+            paginate={paginate}
+          />
+          <Arrow direction={true} heightClass="MidBottom" />
+        </div>
+      </div>
     );
   } else {
     return (

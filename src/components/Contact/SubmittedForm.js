@@ -7,7 +7,7 @@ const SubmittedForm = () => {
       <Header headerStyle={"header"} />
       <div className="submitted">
         <p>Form Submitted</p>
-        <a href="/">Return To Home</a>
+        <a href="/imtv_home/">Return To Home</a>
       </div>
 
       <Footer />

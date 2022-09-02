@@ -14,7 +14,6 @@ const ContactInquiry = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("send!");
 
     emailjs
       .sendForm(

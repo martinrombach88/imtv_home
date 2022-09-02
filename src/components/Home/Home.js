@@ -19,7 +19,6 @@ function Home({ workList, list }) {
         inProductionMedia = item;
       }
     }
-
     for (let item of newsList) {
       if (item.inProduction === "1") {
         inProductionArticle = item;
@@ -42,18 +41,11 @@ function Home({ workList, list }) {
             object={inProductionMedia}
             article={inProductionArticle}
           />
-
-          <SnapScroll
-            hCase="showcaseComponent"
-            component={<News list={newsList} home={true} />}
-            image={true}
-          />
+          <News list={newsList} home={true} />
         </div>
         <Footer />
       </>
     );
-  } else {
-    return <>imtv</>;
   }
 }
 

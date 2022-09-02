@@ -1,42 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
-import Arrow from "../Arrow/Arrow";
-const NewsCards = ({ currentPosts, home, pagination }) => {
+
+const NewsCards = ({ currentPosts, home, pagination, cType }) => {
   const lang = useLang();
   const navigate = useNavigate();
   const renderedCards = currentPosts.map((card, index) => {
-    if (home) {
+    if (cType === "homeImage") {
       return (
-        <div key={index} className="newsHome">
-          <div
-            className="newsHome__ImageContainer newsHome__CursorPointer"
+        <img
+          key={index}
+          className="snapScroll__Content newsHome__Image"
+          src={card.imageLarge}
+          alt={lang ? card.titleKR : card.titleENG}
+          onClick={() =>
+            navigate("/news_article", { state: { article: card } })
+          }
+        />
+      );
+    } else if (cType === "homeText") {
+      return (
+        <div key={index}>
+          <h4
+            className="newsHome__Title newsHome__Link"
             onClick={() =>
               navigate("/news_article", { state: { article: card } })
             }
           >
-            <img
-              className="newsHome__Image"
-              src={card.imageLarge}
-              alt={lang ? card.titleKR : card.titleENG}
-            />
-          </div>
-
-          <div className="newsHome__ContentContainer">
-            <h4>NEWS</h4>
-            <div className="newsHome__Title">
-              <h4
-                onClick={() =>
-                  navigate("/news_article", { state: { article: card } })
-                }
-              >
-                {lang ? card.titleKR : card.titleENG}
-              </h4>
-              <h5>{lang ? card.dateKR : card.dateENG}</h5>
-              <Arrow direction={true} heightClass={"Mid"} />
-            </div>
-
-            {pagination}
-          </div>
+            {lang ? card.titleKR : card.titleENG}
+          </h4>
+          <h6 className="newsHome__Date">
+            {lang ? card.dateKR : card.dateENG}
+          </h6>
         </div>
       );
     } else {
