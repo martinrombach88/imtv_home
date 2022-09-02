@@ -6,7 +6,6 @@ const AboutStaff = ({ staffList }) => {
   const [profile, setProfile] = useState(null);
 
   const staffNames = staffList.map((staffName, index) => {
-    console.log(staffName);
     return (
       <AboutStaffName
         key={index}
