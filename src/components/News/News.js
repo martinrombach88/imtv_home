@@ -7,7 +7,6 @@ import NewsPagination from "./NewsPagination";
 import Arrow from "../Arrow/Arrow";
 
 const News = ({ list, home }) => {
-  //Pagination
   let posts = home ? 1 : 4;
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);

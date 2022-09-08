@@ -65,6 +65,11 @@
   flex-direction: column;
 }
 
+.contact__Map iframe {
+  border: black 1px solid;
+  background-color: rgb(214, 214, 214);
+}
+
 .contact__MapMobile {
   display: none;
 }

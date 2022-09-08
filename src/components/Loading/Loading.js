@@ -1,9 +1,6 @@
 import "./Loading.css";
-import { useNavigate } from "react-router-dom";
 
 const Loading = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="loading">
       <img

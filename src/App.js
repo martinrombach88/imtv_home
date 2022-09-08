@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-
 import Home from "./components/Home/Home.js";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer.js";
 import Work from "./components/Work/Work.js";
@@ -11,45 +10,34 @@ import History from "./components/History/History.js";
 import Contact from "./components/Contact/Contact.js";
 import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
+import Error from "./components/Error/Error.js";
 import { LangProvider } from "./components/Header/LangContext";
 import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
+import axios from "axios";
 
 function App() {
-  const [workObject, setWorkObject] = useState([]);
-  const [newsObject, setNewsObject] = useState([]);
-  const [staffObject, setStaffObject] = useState([]);
+  const [data, setData] = useState({ work: null, news: null, staff: null });
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async () => {
+    try {
+      const newsRes = await axios(`https://imtv-api.herokuapp.com/getnews`);
+      const staffRes = await axios(`https://imtv-api.herokuapp.com/getstaff`);
+      const workRes = await axios(`https://imtv-api.herokuapp.com/getwork`);
+      setData({
+        work: workRes.data.workItems,
+        news: newsRes.data.newsItems,
+        staff: staffRes.data.staffItems,
+      });
+      setLoading(true);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    const fetchNewsData = () => {
-      fetch("https://imtv-api.herokuapp.com/getnews")
-        .then((response) => response.json())
-        .then((result) => {
-          setNewsObject(result);
-        })
-        .catch((error) => console.log("An error occurred"));
-    };
-    fetchNewsData();
-  }, []);
-
-  useEffect(() => {
-    const fetchStaffData = () => {
-      fetch("https://imtv-api.herokuapp.com/getstaff")
-        .then((response) => response.json())
-        .then((result) => setStaffObject(result))
-        .catch((error) => console.log("An error occurred"));
-    };
-    fetchStaffData();
-  }, []);
-
-  useEffect(() => {
-    const fetchWorkData = () => {
-      fetch("https://imtv-api.herokuapp.com/getwork")
-        .then((response) => response.json())
-        .then((result) => setWorkObject(result))
-        .catch((error) => console.log("An error occurred"));
-    };
-    fetchWorkData();
+    fetchData();
   }, []);
 
   return (
@@ -58,22 +46,20 @@ function App() {
         <Route
           path="/"
           element={
-            <Home workList={workObject.workItems} list={newsObject.newsItems} />
+            <Home workList={data.work} newsList={data.news} loading={loading} />
           }
         />
-        <Route path="work" element={<Work workList={workObject.workItems} />} />
-        <Route
-          path="about"
-          element={<About staffList={staffObject.staffItems} />}
-        />
+        <Route path="work" element={<Work workList={data.work} />} />
+        <Route path="about" element={<About staffList={data.staff} />} />
         <Route path="history" element={<History />} />
-        <Route path="news" element={<News list={newsObject.newsItems} />} />
+        <Route path="news" element={<News list={data.news} />} />
         <Route path="news_article" element={<NewsArticleView />} />
         <Route path="contact" element={<Contact />} />
         <Route path="proposal" element={<ContactProposal />} />
         <Route path="inquiry" element={<ContactInquiry />} />
         <Route path="video" element={<VideoPlayer backUrl={"/"} />} />
         <Route path="submitted" element={<SubmittedForm />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
     </LangProvider>
   );
