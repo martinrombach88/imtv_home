@@ -32,7 +32,7 @@ function App() {
       });
       setLoading(true);
     } catch (err) {
-      console.log(err);
+      return <Error />;
     }
   };
 

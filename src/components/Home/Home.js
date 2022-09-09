@@ -1,4 +1,3 @@
-import { React } from "react";
 import Header from "../../components/Header/Header.js";
 import Footer from "../Footer/Footer.js";
 import VideoSlider from "../../components/VideoSlider/VideoSlider";
@@ -14,7 +13,7 @@ function Home({ workList, newsList, loading }) {
         <Header headerStyle={"header"} />
         {loading ? <VideoSlider workList={workList} /> : <HomeSpinner />}
         {loading ? (
-          <InProduction newsList={newsList} workList={workList} />
+          <InProduction object={{ workList: workList, newsList: newsList }} />
         ) : (
           <HomeSpinner />
         )}
