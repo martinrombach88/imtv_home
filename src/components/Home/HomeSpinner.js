@@ -1,12 +1,12 @@
 import Spinner from "react-bootstrap/Spinner";
-import "./Loading.css";
+import "./HomeSpinner.css";
 
 function HomeSpinner() {
   return (
     <>
-      <div className="loading snapScroll">
+      <div className="homeSpinner snapComponent">
         <Spinner animation="border" variant="info" />
-        <h6 className="loading__Text">Loading</h6>
+        <h6>Loading</h6>
       </div>
     </>
   );

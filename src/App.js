@@ -12,7 +12,6 @@ import ContactProposal from "./components/Contact/ContactProposal.js";
 import ContactInquiry from "./components/Contact/ContactInquiry.js";
 import Error from "./components/Error/Error.js";
 import { LangProvider } from "./components/Header/LangContext";
-import "./components/SnapScroll/SnapScroll.css";
 import SubmittedForm from "./components/Contact/SubmittedForm";
 import axios from "axios";
 

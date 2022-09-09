@@ -3,6 +3,9 @@
   color: black;
 }
 
+.aboutOverview {
+}
+
 .about__Container {
   display: flex;
   height: 100%;
@@ -11,22 +14,39 @@
   position: relative;
 }
 
+.aboutPartners__Container {
+  display: flex;
+}
+
+.aboutPartners__MobileContainer {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .aboutPartners__Container {
+    display: none;
+  }
+
+  .aboutPartners__MobileContainer {
+    display: flex;
+  }
+}
 .about__Intro,
-.about__Partners {
+.aboutPartners {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.about__Partners h1,
-.about__StaffContainer h1 {
+.aboutPartners h1,
+.aboutStaff__Container h1 {
   font-size: 3rem;
   text-align: center;
   font-weight: 800;
 }
 
-.about__Partners {
+.aboutPartners {
   padding-top: 7%;
   padding-bottom: 5%;
   height: 90vh;
@@ -34,7 +54,7 @@
   margin-bottom: 2%;
 }
 
-.about__PartnersCycler {
+.aboutPartners__Cycler {
   display: flex;
   justify-content: center;
   margin: 3%;
@@ -45,13 +65,13 @@
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
 }
 
-.about__PartnersCycler div {
+.aboutPartners__Cycler div {
   --animation: slide;
   animation: var(--animation, none) 30s infinite linear;
   height: 180%;
 }
 
-.about__Partners img {
+.aboutPartners img {
   object-fit: contain;
   width: 25%;
   transition: opacity 0.2s;
@@ -69,27 +89,27 @@
   }
 }
 
-.about__PartnersMobile {
+.aboutPartners__Mobile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   align-items: center;
 }
-.about__PartnersMobile h1 {
+.aboutPartners__Mobile h1 {
   font-size: 2rem;
   padding-bottom: 2%;
   text-align: center;
   font-weight: 800;
 }
-.about__PartnersMobImg {
+.aboutPartners__MobImg {
   height: 160px;
   margin-bottom: 3%;
   border-radius: 8%;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
 }
 
-.about__StaffContainer {
+.aboutStaff__Container {
   padding-top: 6%;
   padding-bottom: 4%;
   height: 90vh;
@@ -97,12 +117,12 @@
   flex-direction: column;
 }
 
-.about__StaffColor {
+.aboutStaff__Color {
   color: "rgb(174, 213, 243)";
   background-color: "rgb(33, 54, 80)";
 }
 
-.about__Staff {
+.aboutStaff {
   width: 100vw;
   height: 80vh;
   overflow: hidden;
@@ -110,79 +130,79 @@
   justify-content: center;
 }
 
-.about__StaffColumn {
+.aboutStaff__Column {
   width: 30%;
 }
 
-.about__StaffProfile {
+.aboutStaff__Profile {
   width: 50%;
 }
 
-.about__StaffProfile,
-.about__StaffColumn {
+.aboutStaff__Profile,
+.aboutStaff__Column {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-.about__StaffProfile h2 {
+.aboutStaff__Profile h2 {
   font-size: 1.3em;
   padding-left: 5%;
   color: white;
 }
 
-.about__StaffProfile ul {
+.aboutStaff__Profile ul {
   list-style: none;
   margin: 0;
   padding-left: 5%;
 }
 
-.about__StaffProfile div {
+.aboutStaff__Profile div {
   font-size: 1.2rem;
 }
 
-.about__StaffName {
+.aboutStaff__Name {
   cursor: pointer;
   margin: 2%;
 }
 
-.about__StaffName h5 {
+.aboutStaff__Name h5 {
   font-weight: bold;
   color: white;
 }
 
-.about__StaffProfile::-webkit-scrollbar,
-.about__StaffColumn::-webkit-scrollbar {
+.aboutStaff__Profile::-webkit-scrollbar,
+.aboutStaff__Column::-webkit-scrollbar {
   background-color: rgb(33, 54, 80);
   width: 1em;
 }
 
-.about__StaffProfile::-webkit-scrollbar-track,
-.about__StaffColumn::-webkit-scrollbar-track {
+.abouStaff__Profile::-webkit-scrollbar-track,
+.abouStaff__Column::-webkit-scrollbar-track {
   background-color: rgb(33, 54, 80);
 }
 
-.about__StaffProfile::-webkit-scrollbar-thumb,
-.about__StaffColumn::-webkit-scrollbar-thumb,
-.about__StaffName:hover {
+.abouStaff__Profile::-webkit-scrollbar-thumb,
+.abouStaff__Column::-webkit-scrollbar-thumb,
+.abouStaff__Name:hover {
   background-color: rgb(49, 80, 118);
 }
 
-.about__StaffContentHeader {
+.abouStaff__ContentHeader {
   font-weight: bold;
 }
 
-.about__StaffTitle {
+.abouStaff__Title {
   padding-left: 12%;
   width: 100%;
 }
 
-.about__StaffTitle h2 {
+.aboutStaff__Title h2 {
   font-weight: 800;
 }
 
 @media (max-width: 650px) {
-  .about__StaffContainer {
+  .aboutStaff__Container {
     padding-top: 15%;
     margin-top: 5%;
     height: 75vh;

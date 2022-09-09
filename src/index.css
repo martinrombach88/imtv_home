@@ -59,3 +59,135 @@ body {
   height: 100vh;
   color: white;
 }
+
+.scroll {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.scroll__Padded {
+  padding-bottom: 3%;
+}
+
+.scroll__Arrow {
+  position: absolute;
+  color: rgb(244, 246, 248);
+}
+
+.snapScroll {
+  max-height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+
+.snapScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.snapComponent {
+  background-color: rgb(244, 246, 248);
+  color: black;
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 650px) {
+  .snapComponent {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.snapComponent__ContentContainer,
+.snapComponent__Content {
+  width: 50%;
+}
+
+@media (max-width: 650px) {
+  .snapComponent__ContentContainer,
+  .snapComponent__Content {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+.snapComponent__ComponentContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapComponent__Image {
+  background-color: black;
+  padding-top: 5%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 650px) {
+  .snapComponent__Image {
+    display: none;
+  }
+
+  .snapComponent__TextSection {
+    height: 100%;
+  }
+}
+.snapComponent__ImageMobile {
+  display: none;
+}
+
+.snapComponent__Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  position: relative;
+}
+
+.snapComponent__Btn {
+  display: inline-block;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.snapComponent__Btn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -7px;
+  left: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.snapComponent__Btn:hover:after {
+  color: rgb(255, 255, 255);
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.snapComponent__Btn:hover {
+  color: rgb(255, 255, 255);
+}
+
+.snapComponent__TextSection {
+  width: 80%;
+}
+
+.snapComponent__TextSection h1 {
+  font-weight: 800;
+}

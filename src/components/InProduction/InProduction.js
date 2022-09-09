@@ -36,23 +36,23 @@ const InProduction = ({ object }) => {
       return <HomeSpinner />;
     } else {
       return (
-        <div className="snapScroll">
-          <div className="snapScroll__ContentContainer">
+        <div className="snapComponent">
+          <div className="snapComponent__ContentContainer">
             <img
               src={ipList[0].image}
               alt={ipList[0].mainTitleKR}
-              className="snapScroll__Image"
+              className="snapComponent__Image"
             />
 
             <img
               src={ipList[0].imageWide}
               alt={ipList[0].mainTitleKR}
-              className="snapScroll__ImageMobile"
+              className="snapComponent__ImageMobile"
             />
           </div>
 
           <div
-            className="snapScroll__Content"
+            className="snapComponent__Content"
             style={{
               color: styleObject.color,
               backgroundColor: styleObject.backgroundColor,
@@ -75,7 +75,7 @@ const InProduction = ({ object }) => {
             {lang ? (
               <p
                 style={{ fontSize: "1.2em" }}
-                className="snapScroll__Btn"
+                className="snapComponent__Btn"
                 to="news_article"
                 onClick={() =>
                   navigate("/news_article", { state: { article } })
@@ -86,7 +86,7 @@ const InProduction = ({ object }) => {
             ) : (
               <p
                 style={{ fontSize: "1em" }}
-                className="snapScroll__Btn"
+                className="snapComponent__Btn"
                 to="news_article"
                 onClick={() =>
                   navigate("/news_article", { state: { article } })

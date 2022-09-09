@@ -65,7 +65,8 @@
   flex-direction: column;
 }
 
-.contact__Map iframe {
+.contact__Map iframe,
+.contact__MapMobile iframe {
   border: black 1px solid;
   background-color: rgb(214, 214, 214);
 }
