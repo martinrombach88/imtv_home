@@ -9,4 +9,4 @@ Project was built in React using:
 - React Player
 - React Hooks Form
 
-Temporary Hosting: https://imtv.netlify.app/
+Temporary Hosting: https://www.martinrombachdev.com/imtv_home
