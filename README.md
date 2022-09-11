@@ -3,10 +3,10 @@ My client wanted to update a blog style media portfolio site to something more m
 In particular, he wanted to use videos and modern style conventions to update the views.
 
 Project was built in React using:
+- Axios
 - React Router
-- Material UI and Bootstrap
-- React Timeline
 - React Player
 - React Hooks Form
+- Material UI and Bootstrap
 
 Temporary Hosting: https://www.martinrombachdev.com/imtv_home
