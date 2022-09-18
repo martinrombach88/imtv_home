@@ -4,10 +4,11 @@
   animation: var(--animation, none) 1s infinite linear;
   cursor: pointer;
   z-index: 99;
+  opacity: 0.8;
 }
 
 .arrow:hover {
-  color: grey;
+  opacity: 1;
 }
 
 @keyframes shift {

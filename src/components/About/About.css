@@ -156,7 +156,7 @@
 }
 
 .aboutStaff__Column {
-  width: 30%;
+  width: 26%;
 }
 
 .aboutStaff__Profile {
@@ -188,7 +188,8 @@
 
 .aboutStaff__Name {
   cursor: pointer;
-  margin: 2%;
+  margin-bottom: 3%;
+  padding: 1%;
 }
 
 .aboutStaff__Name h5 {
@@ -206,7 +207,7 @@
 
 .abouStaff__Profile::-webkit-scrollbar-thumb,
 .abouStaff__Column::-webkit-scrollbar-thumb,
-.abouStaff__Name:hover {
+.aboutStaff__Name:hover {
   background-color: rgb(49, 80, 118);
 }
 
@@ -221,6 +222,6 @@
 }
 
 .aboutStaff__Title h2 {
-  padding-left: 10%;
+  padding-left: 12%;
   font-weight: 800;
 }
