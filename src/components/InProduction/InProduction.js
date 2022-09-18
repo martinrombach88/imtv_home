@@ -58,7 +58,7 @@ const InProduction = ({ object }) => {
               backgroundColor: styleObject.backgroundColor,
             }}
           >
-            {lang ? <h5>생산 중</h5> : <h5>In Production</h5>}
+            {lang ? <h5>제작 중</h5> : <h5>In Production</h5>}
             <div>
               {lang ? (
                 <h1>{ipList[0].titleKR}</h1>

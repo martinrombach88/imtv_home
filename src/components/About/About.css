@@ -4,6 +4,27 @@
 }
 
 .aboutOverview {
+  display: flex;
+}
+
+.aboutOverview__Mobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .aboutOverview {
+    display: none;
+  }
+
+  .aboutOverview__Mobile {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0% 10%;
+    text-align: center;
+  }
 }
 
 .about__Container {
@@ -29,6 +50,7 @@
 
   .aboutPartners__MobileContainer {
     display: flex;
+    padding-top: 10%;
   }
 }
 .about__Intro,
@@ -109,22 +131,25 @@
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
 }
 
-.aboutStaff__Container {
+.aboutStaff {
+  color: rgb(174, 213, 243);
+  background-color: rgb(33, 54, 80);
   padding-top: 6%;
   padding-bottom: 4%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.aboutStaff__Color {
-  color: "rgb(174, 213, 243)";
-  background-color: "rgb(33, 54, 80)";
+@media (max-width: 650px) {
+  .aboutStaff {
+    padding-top: 14%;
+  }
 }
 
-.aboutStaff {
+.aboutStaff__UI {
   width: 100vw;
-  height: 80vh;
+  height: 65vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -172,14 +197,11 @@
 }
 
 .aboutStaff__Profile::-webkit-scrollbar,
-.aboutStaff__Column::-webkit-scrollbar {
-  background-color: rgb(33, 54, 80);
-  width: 1em;
-}
-
-.abouStaff__Profile::-webkit-scrollbar-track,
+.aboutStaff__Column::-webkit-scrollbar,
+.aboutStaff__Profile::-webkit-scrollbar-track,
 .abouStaff__Column::-webkit-scrollbar-track {
   background-color: rgb(33, 54, 80);
+  width: 1em;
 }
 
 .abouStaff__Profile::-webkit-scrollbar-thumb,
@@ -193,18 +215,12 @@
 }
 
 .abouStaff__Title {
-  padding-left: 12%;
+  padding-top: 2%;
   width: 100%;
+  text-align: center;
 }
 
 .aboutStaff__Title h2 {
+  padding-left: 10%;
   font-weight: 800;
-}
-
-@media (max-width: 650px) {
-  .aboutStaff__Container {
-    padding-top: 15%;
-    margin-top: 5%;
-    height: 75vh;
-  }
 }

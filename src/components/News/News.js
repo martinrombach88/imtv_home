@@ -16,7 +16,7 @@ const News = ({ list, home }) => {
   const currentPosts = list.slice(indexOfFirstPost, indexOfLastPost);
   if (home) {
     return (
-      <div className="snapComponent">
+      <div className="snapComponent newsHome">
         <NewsCards
           currentPosts={currentPosts}
           cType={"homeImage"}

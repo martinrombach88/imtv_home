@@ -49,7 +49,7 @@ const NewsArticleView = () => {
         </div>
 
         <p className="news__ArticleReturn" onClick={() => navigate(-1)}>
-          {lang ? "뉴스 돌아가" : "Back to News"}
+          {lang ? "뉴스로 돌아가기" : "Back to News"}
         </p>
       </div>
     </div>

@@ -53,7 +53,7 @@ const ContactInquiry = () => {
             <div className="contact__FormField">
               <p>
                 <label htmlFor="company">
-                  {lang ? "회사 이름." : "Company Name"}
+                  {lang ? "회사명." : "Company Name"}
                 </label>
               </p>
               <input type="text" name="company" className="form-control" />
@@ -67,7 +67,7 @@ const ContactInquiry = () => {
             <div className="contact__FormField">
               <p>
                 <label htmlFor="position">
-                  {lang ? "제목" : "Company Position"}
+                  {lang ? "직함" : "Company Position"}
                 </label>
               </p>
               <input type="text" name="position" className="form-control" />
@@ -89,7 +89,7 @@ const ContactInquiry = () => {
             <div className="contact__FormField">
               <p>
                 <label htmlFor="field">
-                  {lang ? "협력 관계" : "Partnership"}
+                  {lang ? "제휴분야" : "Partnership"}
                 </label>
               </p>
               <p className="contact__Label">
@@ -106,7 +106,7 @@ const ContactInquiry = () => {
                   {lang ? "다큐멘터리" : "documentary"}
                 </option>
                 <option value="television">
-                  {lang ? "테레비전" : "television"}
+                  {lang ? "텔레비전" : "television"}
                 </option>
                 <option value="other">{lang ? "다른" : "other"}</option>
               </select>
@@ -151,7 +151,7 @@ const ContactInquiry = () => {
               <input
                 className="btn btn-secondary"
                 type="submit"
-                defaultValue={lang ? "제출해요" : "Submit"}
+                defaultValue={lang ? "제출" : "Submit"}
               />
             </div>
           </div>

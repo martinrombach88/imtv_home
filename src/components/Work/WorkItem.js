@@ -69,7 +69,7 @@ const WorkItem = (work) => {
           </li>
           <li>
             {lang
-              ? "연출: " + workItem.producerKR + ", 극본:" + workItem.writerKR
+              ? "연출: " + workItem.producerKR + ", 극본: " + workItem.writerKR
               : "Directed by: " +
                 workItem.producerENG +
                 ", Written by:" +

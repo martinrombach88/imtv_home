@@ -14,7 +14,6 @@ const ContactProposal = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log("send!");
 
     emailjs
       .sendForm(
@@ -43,7 +42,7 @@ const ContactProposal = () => {
 
         <div className="contact__FormInfo">
           <p className="contact__InfoHeader">
-            {lang ? "문서 제출:" : "Submission of documents:"}
+            {lang ? "서류 제출:" : "Submission of documents:"}
           </p>
           <p>
             {lang
@@ -82,7 +81,9 @@ const ContactProposal = () => {
 
             <div className="contact__FormField">
               <p>
-                <label htmlFor="birthday"> {lang ? "생신." : "Birthday"}</label>
+                <label htmlFor="birthday">
+                  {lang ? "생년월일." : "Birthday"}
+                </label>
               </p>
 
               <input type="date" name="birthday" className="form-control" />
@@ -113,7 +114,7 @@ const ContactProposal = () => {
                 />
               </div>
               <div className="form-check form-check-inline">
-                <label htmlFor="neutral">{lang ? "중립적인" : "neutral"}</label>
+                <label htmlFor="neutral">{lang ? "중립" : "neutral"}</label>
                 <input
                   type="radio"
                   id="neutral"
@@ -137,7 +138,7 @@ const ContactProposal = () => {
             </div>
 
             <div className="contact__FormField mb-3">
-              <label htmlFor="plan">{lang ? "계획" : "Plan"}</label>
+              <label htmlFor="plan">{lang ? "계획안" : "Plan"}</label>
               <textarea
                 className="form-control"
                 name="plan"
@@ -162,7 +163,7 @@ const ContactProposal = () => {
 
             <div className="contact__FormField mb-3">
               <label htmlFor="extra" className="form-label">
-                {lang ? "추가의" : "Additional"}
+                {lang ? "기타" : "Additional"}
               </label>
               <textarea
                 className="form-control"
@@ -175,9 +176,7 @@ const ContactProposal = () => {
 
             <div className="mb-3 contact__FormField">
               <label htmlFor="summary" className="form-label">
-                {lang
-                  ? "요약 및 추가 정보입니다."
-                  : "Summary and Extra Information"}
+                {lang ? "요약 및 PR." : "Summary and Extra Information"}
               </label>
               <textarea
                 className="form-control"
@@ -211,7 +210,7 @@ const ContactProposal = () => {
               <input
                 className="btn btn-secondary"
                 type="submit"
-                defaultValue={lang ? "제출해요" : "Submit"}
+                defaultValue={lang ? "제출" : "Submit"}
               />
             </div>
           </div>

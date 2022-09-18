@@ -122,13 +122,14 @@
   padding: 10px;
   position: relative;
 }
-.header__MobLinksHide {
+.header__MobLinksHide,
+.header__MobLinksDisplay button {
   display: none;
 }
 
 .header__MobLinksDisplay {
   height: 100vh;
-  width: 40vw;
+  width: 30vw;
   z-index: 250;
   background: #101010;
   color: rgb(214, 214, 214);
@@ -140,10 +141,6 @@
   top: 0%;
   left: 0%;
   padding: 0% 0%;
-  outline: none;
-}
-
-.header__MobLinksDisplay button {
   outline: none;
 }
 
