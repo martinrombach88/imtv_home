@@ -1,10 +1,10 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useRef, forwardRef } from "react";
 import HomeSpinner from "../../components/Home/HomeSpinner";
 import { useLang } from "../Header/LangContext";
 import { useNavigate } from "react-router-dom";
 import Arrow from "../Arrow/Arrow";
 
-const InProduction = ({ object }) => {
+const InProduction = forwardRef(({ object, refFunction }, ref) => {
   const lang = useLang();
   const navigate = useNavigate();
   const ipList = [];
@@ -95,12 +95,17 @@ const InProduction = ({ object }) => {
                 View Project
               </p>
             )}
-            <Arrow heightClass={"MidBottom"} className="homeArrow" />
+            <Arrow
+              heightClass={"MidBottom"}
+              className="homeArrow"
+              ref={ref}
+              scrollTo={refFunction}
+            />
           </div>
         </div>
       );
     }
   }
-};
+});
 
 export default InProduction;

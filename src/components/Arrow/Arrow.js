@@ -1,7 +1,9 @@
 import "./Arrow.css";
+import { useRef, forwardRef } from "react";
 
-const Arrow = ({ direction, heightClass }) => {
+const Arrow = forwardRef(({ scrollTo, heightClass, direction }, ref) => {
   let height = null;
+
   if (heightClass === "VeryLow") {
     height = "arrow arrow__VeryLow";
   } else if (heightClass === "High") {
@@ -16,7 +18,7 @@ const Arrow = ({ direction, heightClass }) => {
 
   if (heightClass) {
     return (
-      <div className={height + " arrow"}>
+      <div className={height + " arrow"} onClick={scrollTo}>
         {direction ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +46,7 @@ const Arrow = ({ direction, heightClass }) => {
     );
   } else {
     return (
-      <div className="arrow arrow__Low">
+      <div className="arrow arrow__Low" onClick={scrollTo}>
         {direction ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -71,5 +73,6 @@ const Arrow = ({ direction, heightClass }) => {
       </div>
     );
   }
-};
+});
+
 export default Arrow;

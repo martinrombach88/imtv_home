@@ -43,8 +43,7 @@ const NewsArticleView = () => {
         <div className="news__ArticleBody">
           {body}
           <div>
-            {lang ? article.dateKR + " 썼습니다" : "Written " + article.dateENG}
-            .
+            {lang ? article.dateKR : "Written " + article.dateENG + "."}
           </div>
         </div>
 

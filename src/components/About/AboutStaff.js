@@ -3,8 +3,9 @@ import AboutStaffName from "./AboutStaffName";
 import Arrow from "../Arrow/Arrow";
 import aboutList from "./aboutList";
 import "./About.css";
+import { useRef, forwardRef } from "react";
 
-const AboutStaff = ({ staffList }) => {
+const AboutStaff = forwardRef(({ staffList, refFunction }, ref) => {
   const [profile, setProfile] = useState(null);
 
   const staffNames = staffList.map((staffName, index) => {
@@ -29,9 +30,14 @@ const AboutStaff = ({ staffList }) => {
         <div className="aboutStaff__Profile">{profile}</div>
       </div>
 
-      <Arrow direction={true} heightClass="Mid" />
+      <Arrow
+        direction={true}
+        heightClass="Mid"
+        scrollTo={refFunction}
+        ref={ref}
+      />
     </div>
   );
-};
+});
 
 export default AboutStaff;

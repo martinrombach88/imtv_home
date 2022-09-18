@@ -1,12 +1,12 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./News.css";
-import { useState } from "react";
+import { useState, useRef, forwardRef } from "react";
 import NewsCards from "./NewsCards";
 import NewsPagination from "./NewsPagination";
 import Arrow from "../Arrow/Arrow";
 
-const News = ({ list, home }) => {
+const News = forwardRef(({ list, home, refFunction }, ref) => {
   let posts = home ? 1 : 4;
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,7 +34,12 @@ const News = ({ list, home }) => {
             totalPosts={list.length}
             paginate={paginate}
           />
-          <Arrow direction={true} heightClass="MidBottom" />
+          <Arrow
+            direction={true}
+            heightClass="MidBottom"
+            ref={ref}
+            scrollTo={refFunction}
+          />
         </div>
       </div>
     );
@@ -55,6 +60,6 @@ const News = ({ list, home }) => {
       </div>
     );
   }
-};
+});
 
 export default News;

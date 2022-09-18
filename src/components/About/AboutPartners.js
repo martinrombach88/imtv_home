@@ -1,7 +1,8 @@
 import Arrow from "../Arrow/Arrow";
 import aboutList from "./aboutList";
+import { useRef, forwardRef } from "react";
 
-const AboutPartners = () => {
+const AboutPartners = forwardRef(({ refFunction }, ref) => {
   const array = [];
 
   const generateImages = (num, urlArray) => {
@@ -27,11 +28,11 @@ const AboutPartners = () => {
               <div>{renderedImages}</div>
             </div>
           </div>
-          <Arrow heightClass={"MidBottom"} />
+          <Arrow heightClass={"MidBottom"} scrollTo={refFunction} ref={ref} />
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default AboutPartners;

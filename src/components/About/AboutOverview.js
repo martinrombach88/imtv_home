@@ -1,8 +1,9 @@
 import aboutList from "./aboutList";
 import Arrow from "../Arrow/Arrow";
 import { useLang } from "../Header/LangContext";
+import { useRef, forwardRef } from "react";
 
-const AboutOverview = () => {
+const AboutOverview = forwardRef(({ refFunction }, ref) => {
   const lang = useLang();
 
   return (
@@ -26,7 +27,7 @@ const AboutOverview = () => {
             <h4>{aboutList.subTitleENG}</h4>
           )}
         </div>
-        <Arrow heightClass={"High"} />
+        <Arrow heightClass={"High"} scrollTo={refFunction} ref={ref} />
       </div>
       <div className="snapComponent__ContentContainer">
         <img
@@ -37,6 +38,6 @@ const AboutOverview = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AboutOverview;

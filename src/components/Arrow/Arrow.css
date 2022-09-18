@@ -2,6 +2,12 @@
   position: absolute;
   --animation: shift;
   animation: var(--animation, none) 1s infinite linear;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.arrow:hover {
+  color: grey;
 }
 
 @keyframes shift {

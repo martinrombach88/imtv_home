@@ -1,6 +1,7 @@
 import Arrow from "../Arrow/Arrow";
+import { useRef, forwardRef } from "react";
 
-const AboutPartnersMobile = () => {
+const AboutPartnersMobile = forwardRef(({ refFunction }, ref) => {
   return (
     <>
       <div className="snapComponent aboutPartners__MobileContainer">
@@ -35,12 +36,12 @@ const AboutPartnersMobile = () => {
               src="/imtv_home/assets/images/partners/images/partnersasia.png"
               alt="partners"
             />
-            <Arrow heightClass={"VeryLow"} />
+            <Arrow heightClass={"VeryLow"} scrollTo={refFunction} ref={ref} />
           </div>
         </div>
       </div>
     </>
   );
-};
+});
 
 export default AboutPartnersMobile;
