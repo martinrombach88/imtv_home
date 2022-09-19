@@ -3,15 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import { Link } from "react-router-dom";
 
-/*
-  <Link
-    className="carousel__Link"
-    to={{ pathname: "/video?url=" + sliderVid.fullVid }}
-    target="_blank"
-  >
-*/
 
-// onClick={() => navigate("/video", { state: workItem })}
 
 const WorkItem = (work) => {
   let workItem = work.work;

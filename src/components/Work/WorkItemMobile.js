@@ -47,8 +47,8 @@ const WorkItemMobile = (work) => {
             </li>
             <li>
               {lang
-                ? "방영일시: " + workItem.date
-                : "Release Date: " + workItem.date}
+                ? "방영일시: " + workItem.releaseDate
+                : "Release Date: " + workItem.releaseDate}
             </li>
             <li>
               {lang
@@ -57,9 +57,9 @@ const WorkItemMobile = (work) => {
             </li>
             <li>
               {lang
-                ? "연출: " + workItem.directorKR + ", 극본:" + workItem.writerKR
-                : "Directed by: " +
-                  workItem.directorENG +
+                ? "연출: " + workItem.producerKR + ", 극본:" + workItem.writerKR
+                : "Producer by: " +
+                  workItem.producerENG +
                   ", Written by:" +
                   workItem.writerENG}
             </li>
