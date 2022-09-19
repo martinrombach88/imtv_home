@@ -16,24 +16,28 @@ const News = forwardRef(({ list, home, refFunction }, ref) => {
   const currentPosts = list.slice(indexOfFirstPost, indexOfLastPost);
   if (home) {
     return (
-      <div className="snapComponent newsHome">
-        <NewsCards
-          currentPosts={currentPosts}
-          cType={"homeImage"}
-          home={true}
-        />
-        <div className="snapComponent__Content">
-          <h4 className="newsHome__Title">NEWS</h4>
+      <div className="snapComponent">
+        <div className="snapComponent__Container">
           <NewsCards
             currentPosts={currentPosts}
-            cType={"homeText"}
+            cType={"homeImage"}
             home={true}
           />
-          <NewsPagination
-            postsPerPage={postsPerPage}
-            totalPosts={list.length}
-            paginate={paginate}
-          />
+        </div>
+        <div className="snapComponent__Container">
+          <div className="snapComponent__Content">
+            <h4 className="newsHome__Title">NEWS</h4>
+            <NewsCards
+              currentPosts={currentPosts}
+              cType={"homeText"}
+              home={true}
+            />
+            <NewsPagination
+              postsPerPage={postsPerPage}
+              totalPosts={list.length}
+              paginate={paginate}
+            />
+          </div>
           <Arrow
             direction={true}
             heightClass="MidBottom"

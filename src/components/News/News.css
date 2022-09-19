@@ -133,19 +133,37 @@
 
 .newsHome__Title {
   font-weight: bold;
-  margin: 0% 10%;
   padding: 0;
+  width: 40vw;
 }
 
 .newsHome__Link {
   cursor: pointer;
-  margin-bottom: 8%;
 }
 
 .newsHome__Link:hover {
   color: rgb(127, 32, 168);
 }
 
-.newsHome__Image {
-  object-fit: cover;
+@media (max-width: 650px) {
+  .newsHome__Image {
+    margin-top: 10%;
+    width: 50vw;
+    height: 50vh;
+  }
+
+  .snapComponent__ImageBlackBg {
+    background-color: rgb(244, 246, 248);
+  }
+  .newsHome__Title {
+    width: 100%;
+    padding: 0% 5%;
+  }
+  h4 {
+    font-size: 1.2em;
+  }
+
+  .newsHome__Date {
+    margin-bottom: 5%;
+  }
 }

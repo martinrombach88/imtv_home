@@ -57,5 +57,3 @@ const VideoSlider = forwardRef(({ workList, refFunction }, ref) => {
 });
 
 export default VideoSlider;
-
-// heightClass="Mid" className="home__Arrow"

@@ -41,13 +41,13 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
             <img
               src={ipList[0].image}
               alt={ipList[0].mainTitleKR}
-              className="snapComponent__Image"
+              className="snapComponent__Image snapComponent__ImageBlackBg"
             />
 
             <img
               src={ipList[0].imageWide}
               alt={ipList[0].mainTitleKR}
-              className="snapComponent__ImageMobile"
+              className="snapComponent__ImageMobile snapComponent__ImageBlackBg"
             />
           </div>
 

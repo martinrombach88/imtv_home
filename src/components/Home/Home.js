@@ -63,7 +63,6 @@ function Home({ workList, newsList, loading }) {
         </div>
       </div>
       <Footer />
-      {/* <ScrollExample /> */}
     </>
   );
 }

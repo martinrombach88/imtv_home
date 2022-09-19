@@ -9,7 +9,7 @@ const NewsCards = ({ currentPosts, home, pagination, cType }) => {
       return (
         <img
           key={index}
-          className="snapScroll__Content newsHome__Image"
+          className="snapComponent__Image newsHome__Image snapComponent__ImageBlackBg"
           src={card.imageLarge}
           alt={lang ? card.titleKR : card.titleENG}
           onClick={() =>
@@ -43,7 +43,7 @@ const NewsCards = ({ currentPosts, home, pagination, cType }) => {
           }
         >
           <img
-            className="news__Image"
+            className="news__Image "
             src={card.image ? card.image : card.imageLarge}
             alt={lang ? card.titleKR : card.titleENG}
           />

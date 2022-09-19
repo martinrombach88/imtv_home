@@ -125,12 +125,16 @@ body {
 }
 
 .snapComponent__Image {
-  background-color: black;
   padding-top: 5%;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
+.snapComponent__ImageBlackBg {
+  background-color: black;
+}
+
 @media (max-width: 650px) {
   .snapComponent__TextSection {
     height: 100%;

@@ -26,10 +26,7 @@
   color: rgb(255, 255, 255);
 }
 
-.carousel__Link {
-  color: rgb(255, 255, 255);
-}
-
+.carousel__Link,
 .carousel__Link:hover {
   color: rgb(211, 211, 211);
 }

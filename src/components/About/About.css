@@ -205,8 +205,8 @@
   width: 1em;
 }
 
-.abouStaff__Profile::-webkit-scrollbar-thumb,
-.abouStaff__Column::-webkit-scrollbar-thumb,
+.aboutStaff__Profile::-webkit-scrollbar-thumb,
+.aboutStaff__Column::-webkit-scrollbar-thumb,
 .aboutStaff__Name:hover {
   background-color: rgb(49, 80, 118);
 }
