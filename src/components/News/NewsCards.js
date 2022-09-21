@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
+import "./News.css";
 
 const NewsCards = ({ currentPosts, home, pagination, cType }) => {
   const lang = useLang();

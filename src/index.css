@@ -120,6 +120,9 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.snapComponent__Center {
   align-items: center;
   justify-content: center;
 }

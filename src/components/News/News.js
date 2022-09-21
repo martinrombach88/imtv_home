@@ -17,15 +17,15 @@ const News = forwardRef(({ list, home, refFunction }, ref) => {
   if (home) {
     return (
       <div className="snapComponent">
-        <div className="snapComponent__Container">
+        <div className="snapComponent__Container newsHomeMobile">
           <NewsCards
             currentPosts={currentPosts}
             cType={"homeImage"}
             home={true}
           />
         </div>
-        <div className="snapComponent__Container">
-          <div className="snapComponent__Content">
+        <div className="snapComponent__Container newsHome ">
+          <div className="snapComponent__Content ">
             <h4 className="newsHome__Title">NEWS</h4>
             <NewsCards
               currentPosts={currentPosts}

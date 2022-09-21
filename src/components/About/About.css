@@ -124,9 +124,8 @@
   text-align: center;
   font-weight: 800;
 }
-.aboutPartners__MobImg {
-  height: 160px;
-  margin-bottom: 3%;
+.aboutPartners__MobileImage {
+  width: 80%;
   border-radius: 8%;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
 }
