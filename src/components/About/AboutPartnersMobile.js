@@ -10,7 +10,12 @@ const AboutPartnersMobile = forwardRef(({ refFunction }, ref) => {
             <h1>PARTNERS</h1>
             <img
               className="aboutPartners__MobileImage"
-              src="/imtv_home/assets/images/partners/images/partners.png"
+              src="/imtv_home/assets/images/partners/images/partnerskr1.png"
+              alt="partners"
+            />
+            <img
+              className="aboutPartners__MobileImage"
+              src="/imtv_home/assets/images/partners/images/partnersworld.png"
               alt="partners"
             />
           </div>

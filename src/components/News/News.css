@@ -29,13 +29,13 @@
 }
 
 .news__Card {
-  background-color: white;
-  color: black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: white;
+  color: black;
   width: 40%;
   margin: 2%;
+  padding: 0% 2%;
   border-radius: 1%;
   cursor: pointer;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
@@ -49,16 +49,18 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin: 2%;
     border-radius: 1%;
     cursor: pointer;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
   }
+
+  .news__Card h6 {
+    margin: 2%;
+  }
 }
 
 .news__Card h6 {
-  padding: 2% 5% 2% 5%;
-  margin: 0;
+  margin: 2%;
 }
 
 .news__Image {
@@ -70,9 +72,9 @@
 }
 @media (max-width: 650px) {
   .news__Image {
-    margin-top: 2%;
-    object-fit: scale-down;
+    object-fit: cover;
     width: 70vw;
+    height: 16vh;
     border-radius: 2%;
   }
 }
@@ -100,24 +102,34 @@
   width: 40%;
 }
 
+.news__ArticleBody p {
+  margin: 2% 20%;
+  font-size: 1.1em;
+}
+
 @media (max-width: 650px) {
   .news__Article img {
     width: 80%;
+    margin-bottom: 5%;
   }
 
-  .news__ArticleBody,
   .news__Article h3 {
     text-align: center;
-    font-weight: bold;
-    margin: 1%;
     width: 80%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  .news__ArticleBody p {
+    margin: 2% 5%;
   }
 }
 
-.news__ArticleBody {
-  margin: 2% 5% 2% 5%;
-  width: 60%;
+.news__ArticleDate {
+  text-align: center;
+  margin-bottom: 5%;
 }
+
 .news__ArticleReturn {
   font-weight: bold;
   cursor: pointer;
@@ -131,13 +143,16 @@
 
 @media (max-width: 650px) {
   .newsHome {
+    height: 100vh;
+    margin-top: 16%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .newsHomeMobile {
     align-items: center;
-    justify-content: center;
+    height: 50%;
+    justify-content: flex-start;
   }
 }
 
@@ -151,9 +166,10 @@
 
 .newsHome__Title {
   font-weight: bold;
-  padding: 5%;
+  padding: 3%;
   width: 46vw;
 }
+
 .newsHome__Date {
   margin-bottom: 5%;
 }
@@ -174,9 +190,9 @@
 
 @media (max-width: 650px) {
   .newsHome__Image {
-    margin-top: 10%;
-    width: 80vw;
-    height: 50vh;
+    margin-top: 18%;
+    width: 74vw;
+    height: 40vh;
   }
 
   .snapComponent__ImageBlackBg {
@@ -184,7 +200,6 @@
   }
   .newsHome__Title {
     width: 100%;
-    padding: 0% 5%;
   }
   h4 {
     font-size: 1.2em;

@@ -48,13 +48,8 @@ const NewsCards = ({ currentPosts, home, pagination, cType }) => {
             src={card.image ? card.image : card.imageLarge}
             alt={lang ? card.titleKR : card.titleENG}
           />
-          <div>
-            <h6>
-              {lang ? card.titleKR : card.titleENG}
-              <br />
-              {lang ? card.dateKR : card.dateENG}
-            </h6>
-          </div>
+          <h6>{lang ? card.titleKR : card.titleENG}</h6>
+          <h6> {lang ? card.dateKR : card.dateENG}</h6>
         </div>
       );
     }

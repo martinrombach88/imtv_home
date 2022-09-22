@@ -112,6 +112,7 @@
 }
 
 .aboutPartners__Mobile {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,7 +126,8 @@
   font-weight: 800;
 }
 .aboutPartners__MobileImage {
-  width: 80%;
+  width: 70%;
+  margin: 2%;
   border-radius: 8%;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
 }
@@ -142,7 +144,8 @@
 
 @media (max-width: 650px) {
   .aboutStaff {
-    padding-top: 14%;
+    height: 100vh;
+    justify-content: center;
   }
 }
 

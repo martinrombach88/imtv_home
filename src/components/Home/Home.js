@@ -9,6 +9,7 @@ import { useRef } from "react";
 
 function Home({ workList, newsList, loading }) {
   const vidRef = useRef();
+
   const ipRef = useRef();
   const newsRef = useRef();
 

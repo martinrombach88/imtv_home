@@ -37,9 +37,7 @@ const VideoSlider = forwardRef(({ workList, refFunction }, ref) => {
                   height="125vh"
                   width="100%"
                   config={{
-                    vimeo: {
-                      controls: 0,
-                    },
+                    vimeo: { playerOptions: { playsinline: true } },
                   }}
                 />
 

@@ -24,7 +24,7 @@ const News = forwardRef(({ list, home, refFunction }, ref) => {
             home={true}
           />
         </div>
-        <div className="snapComponent__Container newsHome ">
+        <div className="snapComponent__Container newsHome">
           <div className="snapComponent__Content ">
             <h4 className="newsHome__Title">NEWS</h4>
             <NewsCards
