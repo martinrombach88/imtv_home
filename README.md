@@ -8,5 +8,3 @@ Project was built in React using:
 - React Player
 - React Hooks Form
 - Material UI and Bootstrap
-
-Temporary Hosting: https://www.martinrombachdev.com/imtv_home
