@@ -10,8 +10,8 @@ const inProduction = {
   "backgroundColor": "rgb(33,54,80)",
   "article":  {
     id: 1,
-    image: "./assets/images//news/news1.jpg",
-    imageLarge: "/assets/images/news/news1large2.jpg",
+    image: "assets/images/news/news1.jpg",
+    imageLarge: "assets/images/news/news1large2.jpg",
     dateKR: "2022 1월 13",
     dateENG: "13th Jan 2022",
     titleKR: "안은진·유아인·전성우·김윤혜, '종말의 바보' 출연 확정(공식)",
