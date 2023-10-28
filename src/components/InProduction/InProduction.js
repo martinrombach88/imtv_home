@@ -1,4 +1,5 @@
-import { React, useState, useEffect, useRef, forwardRef } from "react";
+// import { React, useState, useEffect, useRef, forwardRef } from "react";
+import { React,forwardRef } from "react";
 import HomeSpinner from "../../components/Home/HomeSpinner";
 import { useLang } from "../Header/LangContext";
 import { useNavigate } from "react-router-dom";
@@ -7,30 +8,32 @@ import Arrow from "../Arrow/Arrow";
 const InProduction = forwardRef(({ object, refFunction }, ref) => {
   const lang = useLang();
   const navigate = useNavigate();
-  const ipList = [];
-  const [article, setArticle] = useState(null);
-  const [styleObject, setStyleObject] = useState({});
+  // const ipList = [];
+  // const [article, setArticle] = useState(null);
+  const article = object.article;
+  // const [styleObject, setStyleObject] = useState({});
+  const styleObject = {backgroundColor: object.backgroundColor, color: object.color}
 
-  useEffect(() => {
-    setArticle(ipList[1]);
-    setStyleObject({
-      backgroundColor: ipList[0]?.backgroundColor,
-      color: ipList[0]?.color,
-    });
-  }, []);
+  // useEffect(() => {
+  //   setArticle(object.article);
+  //   setStyleObject({
+  //     backgroundColor: object.backgroundColor,
+  //     color: object.color,
+  //   });
+  // }, []);
 
-  if (object) {
-    for (let work of object.workList) {
-      if (work?.inProduction === "1") {
-        ipList.push(work);
-      }
-    }
+  // if (object) {
+  //   for (let work of object.workList) {
+  //     if (work?.inProduction === "1") {
+  //       ipList.push(work);
+  //     }
+  //   }
 
-    for (let news of object.newsList) {
-      if (news?.inProduction === "1") {
-        ipList.push(news);
-      }
-    }
+  //   for (let news of object.newsList) {
+  //     if (news?.inProduction === "1") {
+  //       ipList.push(news);
+  //     }
+  //   }
 
     if (!object) {
       return <HomeSpinner />;
@@ -39,14 +42,14 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
         <div className="snapComponent">
           <div className="snapComponent__ContentContainer">
             <img
-              src={ipList[0]?.image}
-              alt={ipList[0]?.mainTitleKR}
+              src={object?.image}
+              alt={object?.mainTitleKR}
               className="snapComponent__Image snapComponent__ImageBlackBg"
             />
 
             <img
-              src={ipList[0]?.imageWide}
-              alt={ipList[0]?.mainTitleKR}
+              src={object?.imageWide}
+              alt={object?.mainTitleKR}
               className="snapComponent__ImageMobile snapComponent__ImageBlackBg"
             />
           </div>
@@ -61,15 +64,15 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
             {lang ? <h5>제작 중</h5> : <h5>In Production</h5>}
             <div>
               {lang ? (
-                <h1>{ipList[0]?.titleKR}</h1>
+                <h1>{object?.titleKR}</h1>
               ) : (
-                <h3>{ipList[0]?.titleENG}</h3>
+                <h3>{object?.titleENG}</h3>
               )}
 
               {lang ? (
-                <h4>{ipList[0]?.subTitleKR}</h4>
+                <h4>{object?.subTitleKR}</h4>
               ) : (
-                <h5>{ipList[0]?.subTitleENG}</h5>
+                <h5>{object?.subTitleENG}</h5>
               )}
             </div>
             {lang ? (
@@ -105,7 +108,7 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
         </div>
       );
     }
-  }
+  
 });
 
 export default InProduction;

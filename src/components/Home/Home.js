@@ -4,7 +4,6 @@ import VideoSlider from "../../components/VideoSlider/VideoSlider";
 import News from "../../components/News/News.js";
 import HomeSpinner from "./HomeSpinner";
 import InProduction from "../../components/InProduction/InProduction";
-import ScrollExample from "../../components/Arrow/ScrollExample";
 import { useRef } from "react";
 
 function Home({ workList, inProduction, newsList, loading }) {
@@ -43,7 +42,7 @@ function Home({ workList, inProduction, newsList, loading }) {
             <HomeSpinner />
           ) : (
             <InProduction
-            object={{ workList: workList, newsList: newsList }}
+            object={inProduction}
             refFunction={scrollToNews}
             ref={newsRef}
           />
