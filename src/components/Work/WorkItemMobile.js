@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+
 import { useLang } from "../Header/LangContext";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 
 const WorkItemMobile = (work) => {
   const lang = useLang();
   let workItem = work.work;
-  const navigate = useNavigate();
   const [itemActive, setItemActive] = useState(false);
   const toggleActive = () => {
     setItemActive((prevState) => !prevState);
@@ -66,7 +65,7 @@ const WorkItemMobile = (work) => {
           <a
             className="btn btn-outline-light"
             href={workItem.fullVid}
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <h5>{lang ? "예고편 보기" : "Watch Trailer"}</h5>
           </a>

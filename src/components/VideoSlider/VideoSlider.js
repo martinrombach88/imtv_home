@@ -5,7 +5,7 @@ import { Carousel } from "react-bootstrap";
 import { useLang } from "../Header/LangContext";
 import Arrow from "../Arrow/Arrow";
 import { Link } from "react-router-dom";
-import { useRef, forwardRef } from "react";
+import {  forwardRef } from "react";
 
 const VideoSlider = forwardRef(({ workList, refFunction }, ref) => {
   const lang = useLang();
