@@ -3,12 +3,12 @@ const workList = [
     id: 1,
     titleKR: "쉿! 그놈을 부탁해",
     titleENG: "Shh! Take Care of Him.",
-    mediaImg: "/imtv_home/assets/images/work/shhWide.png",
-    mediaImgTall: "/imtv_home/assets/images/work/shhTall.jpg",
+    mediaImg: "./imtv_home/assets/images/work/shhWide.png",
+    mediaImgTall: "./imtv_home/assets/images/work/shhTall.jpg",
     clipVid: "https://youtu.be/0mC8ANbrC_s",
     fullVid: "https://youtu.be/5_youLWtOV8",
     channels: "olleh tv, Seezn, Skylife",
-    date: "2021.05.28",
+    releaseDate: "2021.05.28",
     directorKR: "이정훈",
     writerKR: "자인, 방사랑 ",
     starringKR: "김슬기, 이주우, 송지은, 강율",
@@ -25,12 +25,12 @@ const workList = [
     id: 2,
     titleKR: "그남자 오수",
     titleENG: "Mr Osu",
-    mediaImg: "/imtv_home/assets/images/work/osuWide.png",
-    mediaImgTall: "/imtv_home/assets/images/work/osuTall.jpg",
+    mediaImg: "./imtv_home/assets/images/work/osuWide.png",
+    mediaImgTall: "./imtv_home/assets/images/work/osuTall.jpg",
     clipVid: "https://youtu.be/_JcnedmLy38",
     fullVid: "https://youtu.be/dAlrU9UYPXU",
     channels: "OCN",
-    date: "2018.03.05 ~ 2018.04.24",
+    releaseDate: "2018.03.05 ~ 2018.04.24",
     directorKR: "남기훈",
     writerKR: "정유선",
     starringKR: "이종현, 김소은",
@@ -46,12 +46,12 @@ const workList = [
     id: 3,
     titleKR: "메멘토모리",
     titleENG: "Memento Mori",
-    mediaImg: "/imtv_home/assets/images/work/osuWide.png",
-    mediaImgTall: "/imtv_home/assets/images/work/osuTall.jpg",
+    mediaImg: "./imtv_home/assets/images/work/mementoWide.png",
+    mediaImgTall: "./imtv_home/assets/images/work/mementoTall.jpg",
     clipVid: "https://www.youtube.com/embed/oxOPg3AeteE",
     fullVid: "https://youtu.be/BMbQYtWmcmo",
     channels: "OCN",
-    date: " 2018.06.28",
+    releaseDate: "2018.06.28",
     directorKR: "황승언, 재희, 김호정, 차순배",
     writerKR: "정유선",
     starringKR: "이철민, 극본:조규원, 오기원",
@@ -67,12 +67,12 @@ const workList = [
     id: 4,
     titleKR:"다시 만난 세계",
     titleENG: "Reunited World",
-    mediaImg: "/imtv_home/assets/images/work/mementoWide.png",
-    mediaImgTall: "/imtv_home/assets/images/work/mementoTall.jpg",
+    mediaImg: "./imtv_home/assets/images/work/worldWide.png",
+    mediaImgTall: "./imtv_home/assets/images/work/worldTall.jpg",
     clipVid: "https://www.youtube.com/embed/kOeYJBzbLsI",
     fullVid: "https://youtu.be/SLaU1iEbwB0",
     channels: "SBS",
-    date: " 2017.07.07 ~ 2017.09.21",
+    releaseDate: " 2017.07.07 ~ 2017.09.21",
     directorKR: "백수찬",
     writerKR: "이희명",
     starringKR: "여진구, 이연희",
@@ -88,20 +88,3 @@ const workList = [
 
 export default workList;
 
-//https://www.youtube.com/embed/kOeYJBzbLsI
-/*
-
-다시 만난 세계
-열아홉 살 청년과 같은 해 태어난 동갑 친구인 서른한 살 여자. 12년 나이 차이가 나는 동갑 소꿉친구 남녀의 판타지 로맨스.
-방영채널: SBS
-방영일시: 2017.07.07 ~ 2017.09.21
-출연: 여진구, 이연희
-연출: 백수찬, 극본:이희명
-
-Reunited World
-A 31-year-old woman, a friend of the same age, was born the same year as a 19-year-old young man. Fantasy romance between childhood friends of the same age with a 12-year age difference.
-Available on: SBS
-Release Date: 2017.07.07 ~ 2017.09.21
-Starring: Yeo Jin-goo, Lee Yeon-hee
-Directed by: Baek Soo-chan, Written by:Lee Hee-myung
-*/

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const WorkItem = ({work}) => {
   let workItem = work;
+  console.log(workItem)
 
   const [itemHover, setItemHover] = useState(false);
   const lang = useLang();
@@ -32,11 +33,12 @@ const WorkItem = ({work}) => {
     >
       <img
         className={changeClassImage()}
-        src={workItem?.image}
+        src={workItem?.mediaImg}
         alt={lang ? workItem.titleKR : workItem.titleENG}
       ></img>
+      
       <div className={changeClass()}>
-        <h2>{lang ? workItem.titleKR : workItem.titleENG}</h2>
+        
         <h5>{lang ? workItem.descriptionKR : workItem.descriptionENG}</h5>
         <ul>
           {workItem.channels ? (
@@ -58,9 +60,9 @@ const WorkItem = ({work}) => {
           </li>
           <li>
             {lang
-              ? "연출: " + workItem.producerKR + ", 극본: " + workItem.writerKR
+              ? "연출: " + workItem.directorKR + ", 극본: " + workItem.writerKR
               : "Directed by: " +
-                workItem.producerENG +
+                workItem.directorENG +
                 ", Written by:" +
                 workItem.writerENG}
           </li>
