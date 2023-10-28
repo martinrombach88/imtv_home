@@ -11,11 +11,12 @@ const VideoSlider = forwardRef(({ workList, refFunction }, ref) => {
   const lang = useLang();
   const sliderVids = [];
 
-  for (let work of workList) {
-    if (work.clipVid !== "") {
-      sliderVids.push(work);
-    }
-  }
+  // for (let work of workList) {
+  //   if (work.clipVid !== "") {
+  //     sliderVids.push(work);
+  //   }
+  // }
+
 
   return (
     <div className="carousel__Container">

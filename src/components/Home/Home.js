@@ -7,9 +7,8 @@ import InProduction from "../../components/InProduction/InProduction";
 import ScrollExample from "../../components/Arrow/ScrollExample";
 import { useRef } from "react";
 
-function Home({ workList, newsList, loading }) {
+function Home({ workList, inProduction, newsList, loading }) {
   const vidRef = useRef();
-
   const ipRef = useRef();
   const newsRef = useRef();
 
@@ -30,36 +29,36 @@ function Home({ workList, newsList, loading }) {
         <Header headerStyle={"header"} />
         <div ref={vidRef}>
           {loading ? (
+            <HomeSpinner />
+          ) : (
             <VideoSlider
               workList={workList}
               refFunction={scrollToIp}
               ref={ipRef}
             />
-          ) : (
-            <HomeSpinner />
           )}
         </div>
         <div ref={ipRef}>
           {loading ? (
-            <InProduction
-              object={{ workList: workList, newsList: newsList }}
-              refFunction={scrollToNews}
-              ref={newsRef}
-            />
-          ) : (
             <HomeSpinner />
+          ) : (
+            <InProduction
+            object={{ workList: workList, newsList: newsList }}
+            refFunction={scrollToNews}
+            ref={newsRef}
+          />
           )}
         </div>
         <div ref={newsRef}>
           {loading ? (
-            <News
-              list={newsList}
-              home={true}
-              refFunction={scrollToVid}
-              ref={vidRef}
-            />
-          ) : (
             <HomeSpinner />
+          ) : (
+            <News
+            list={newsList}
+            home={true}
+            refFunction={scrollToVid}
+            ref={vidRef}
+          />
           )}
         </div>
       </div>

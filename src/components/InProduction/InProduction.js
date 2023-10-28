@@ -14,20 +14,20 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
   useEffect(() => {
     setArticle(ipList[1]);
     setStyleObject({
-      backgroundColor: ipList[0].backgroundColor,
-      color: ipList[0].color,
+      backgroundColor: ipList[0]?.backgroundColor,
+      color: ipList[0]?.color,
     });
   }, []);
 
   if (object) {
     for (let work of object.workList) {
-      if (work.inProduction === "1") {
+      if (work?.inProduction === "1") {
         ipList.push(work);
       }
     }
 
     for (let news of object.newsList) {
-      if (news.inProduction === "1") {
+      if (news?.inProduction === "1") {
         ipList.push(news);
       }
     }
@@ -39,14 +39,14 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
         <div className="snapComponent">
           <div className="snapComponent__ContentContainer">
             <img
-              src={ipList[0].image}
-              alt={ipList[0].mainTitleKR}
+              src={ipList[0]?.image}
+              alt={ipList[0]?.mainTitleKR}
               className="snapComponent__Image snapComponent__ImageBlackBg"
             />
 
             <img
-              src={ipList[0].imageWide}
-              alt={ipList[0].mainTitleKR}
+              src={ipList[0]?.imageWide}
+              alt={ipList[0]?.mainTitleKR}
               className="snapComponent__ImageMobile snapComponent__ImageBlackBg"
             />
           </div>
@@ -61,15 +61,15 @@ const InProduction = forwardRef(({ object, refFunction }, ref) => {
             {lang ? <h5>제작 중</h5> : <h5>In Production</h5>}
             <div>
               {lang ? (
-                <h1>{ipList[0].titleKR}</h1>
+                <h1>{ipList[0]?.titleKR}</h1>
               ) : (
-                <h3>{ipList[0].titleENG}</h3>
+                <h3>{ipList[0]?.titleENG}</h3>
               )}
 
               {lang ? (
-                <h4>{ipList[0].subTitleKR}</h4>
+                <h4>{ipList[0]?.subTitleKR}</h4>
               ) : (
-                <h5>{ipList[0].subTitleENG}</h5>
+                <h5>{ipList[0]?.subTitleENG}</h5>
               )}
             </div>
             {lang ? (
