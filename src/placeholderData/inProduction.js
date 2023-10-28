@@ -1,7 +1,7 @@
 const inProduction = {
   "title": "inProduction",
-  "image": "./imtv_home/assets/images/work/foolWide.jpg",
-  "imageWide": "./imtv_home/assets/images/work/foolWide.jpg",
+  "image": "assets/images/work/foolWide.jpg",
+  "imageWide": "assets/images/work/foolWide.jpg",
   "titleKR": "중말의 바보",
   "subTitleKR": "넷플릭스와 협업",
   "titleENG": "Fool in the End",
@@ -10,7 +10,7 @@ const inProduction = {
   "backgroundColor": "rgb(33,54,80)",
   "article":  {
     id: 1,
-    image: "../assets/images//news/news1.jpg",
+    image: "./assets/images//news/news1.jpg",
     imageLarge: "/assets/images/news/news1large2.jpg",
     dateKR: "2022 1월 13",
     dateENG: "13th Jan 2022",
