@@ -1,4 +1,5 @@
-Website built for IMTV using React. Includes:
+Website built for IMTV using React. 
+Features:
 - video carousel
 - blog
 - animated components
