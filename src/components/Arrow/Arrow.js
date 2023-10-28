@@ -1,7 +1,7 @@
 import "./Arrow.css";
-import { useRef, forwardRef } from "react";
+import {  forwardRef } from "react";
 
-const Arrow = forwardRef(({ scrollTo, heightClass, direction }, ref) => {
+const Arrow = forwardRef(({ scrollTo, heightClass, direction }) => {
   let height = null;
 
   if (heightClass === "VeryLow") {

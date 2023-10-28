@@ -1,7 +1,7 @@
 import aboutList from "./aboutList";
 import Arrow from "../Arrow/Arrow";
 import { useLang } from "../Header/LangContext";
-import { useRef, forwardRef } from "react";
+import { forwardRef } from "react";
 
 const AboutOverview = forwardRef(({ refFunction }, ref) => {
   const lang = useLang();

@@ -1,6 +1,5 @@
 import Arrow from "../Arrow/Arrow";
-import aboutList from "./aboutList";
-import { useRef, forwardRef } from "react";
+import { forwardRef } from "react";
 
 const AboutPartners = forwardRef(({ refFunction }, ref) => {
   const array = [];

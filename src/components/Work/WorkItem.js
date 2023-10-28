@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const WorkItem = (work) => {
   let workItem = work.work;
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [itemHover, setItemHover] = useState(false);
   const lang = useLang();
 

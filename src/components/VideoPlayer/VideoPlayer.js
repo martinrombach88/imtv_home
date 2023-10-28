@@ -1,12 +1,11 @@
 import ReactPlayer from "react-player";
 import "./VideoPlayer.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 const VideoPlayer = () => {
   const search = useLocation().search;
   const url = new URLSearchParams(search).get("url");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const x = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
