@@ -1,8 +1,8 @@
 const newsList = [
   {
     id: 1,
-    image: "imtv_home/assets/images//news/news1.jpg",
-    imageLarge: "/imtv_home/assets/images/news/news1large2.jpg",
+    image: "images/news1.jpg",
+    imageLarge: "images/news/news1large2.jpg",
     dateKR: "2022 1월 13",
     dateENG: "13th Jan 2022",
     titleKR: "안은진·유아인·전성우·김윤혜, '종말의 바보' 출연 확정(공식)",
@@ -23,8 +23,8 @@ const newsList = [
   },
   {
     id: 2,
-    image: "/imtv_home/assets/images/news/news2.png",
-    imageLarge: "/imtv_home/assets/images/news/news2large.png",
+    image: "images/news/news2.png",
+    imageLarge: "images/news/news2large.png",
     dateKR: "2021 12월 20",
     dateENG: "20th Dec 2021",
     titleKR:
@@ -48,8 +48,8 @@ const newsList = [
     id: 3,
     dateKR: "2021 12월 5",
     dateENG: "5th Dec 2021",
-    image: "/imtv_home/assets/images/news/news3.jpg",
-    imageLarge: "/imtv_home/assets/images/news/news3.jpg",
+    image: "images/news/news3.jpg",
+    imageLarge: "images/news/news3.jpg",
     titleKR:
       "아이엠티브이, 나비클럽 영상화 판권 계약체결 - '2021 IP 콘텐츠 사업화 상담회'를 통해",
     titleENG:
@@ -71,8 +71,8 @@ const newsList = [
     id: 4,
     dateKR: "2021 10월 16",
     dateENG: "16th October 2021",
-    image: "/imtv_home/assets/images/news/news4.jpg",
-    imageLarge: "/imtv_home/assets/images/news/news4.jpg",
+    image: "images/news/news4.jpg",
+    imageLarge: "images/news/news4.jpg",
     titleKR:
       "'쉿! 그놈을 부탁해' 김슬기·송지은·이주우·강율, 유쾌+통쾌 복수 대행극",
     titleENG:
@@ -98,8 +98,8 @@ const newsList = [
     id: 5,
     dateKR: "2021 10월 16",
     dateENG: "16th October 2021",
-    image: "/imtv_home/assets/images/news/news5.jpg",
-    imageLarge: "/imtv_home/assets/images/news/news5.jpg",
+    image: "images/news/news5.jpg",
+    imageLarge: "images/news/news5.jpg",
     titleKR:
       "아이엠티브이와 프랑스 갤럭시가 제작한 '베르나르 베르베르의 고양이 사전' JTBC 팩추얼로 방송!",
     titleENG:
