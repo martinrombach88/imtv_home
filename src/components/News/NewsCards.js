@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../Header/LangContext";
 import "./News.css";
 
-const NewsCards = ({ currentPosts, home, pagination, cType }) => {
+const NewsCards = ({ currentPosts, home,  cType }) => {
   const lang = useLang();
   const navigate = useNavigate();
   const renderedCards = currentPosts.map((card, index) => {
