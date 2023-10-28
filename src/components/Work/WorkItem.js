@@ -1,12 +1,9 @@
 import { useState } from "react";
-
 import { useLang } from "../Header/LangContext";
 import { Link } from "react-router-dom";
 
-
-
-const WorkItem = (work) => {
-  let workItem = work.work;
+const WorkItem = ({work}) => {
+  let workItem = work;
 
   const [itemHover, setItemHover] = useState(false);
   const lang = useLang();
@@ -35,7 +32,7 @@ const WorkItem = (work) => {
     >
       <img
         className={changeClassImage()}
-        src={workItem.image}
+        src={workItem?.image}
         alt={lang ? workItem.titleKR : workItem.titleENG}
       ></img>
       <div className={changeClass()}>

@@ -1,8 +1,8 @@
 const projectsList = [
   {
     id: 1,
-    image: "/assets/images/news/news2.png",
-    imageLarge: "/assets/images/news/news2large.png",
+    image: "/imtv_home/assets/images/news/news2.png",
+    imageLarge: "/imtv_home/assets/images/news/news2large.png",
     dateKR: "2021 12월 20",
     dateENG: "20th Dec 2021",
     titleKR:

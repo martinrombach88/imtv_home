@@ -10,11 +10,11 @@ const Work = ({ workList }) => {
       filteredList.push(work);
     }
   }
-  let webList = filteredList.map((work, index) => {
+  let webList = filteredList?.map((work, index) => {
     return <WorkItem work={work} key={index} />;
   });
 
-  let mobileList = filteredList.map((work, index) => {
+  let mobileList = filteredList?.map((work, index) => {
     return <WorkItemMobile work={work} key={index} />;
   });
 
