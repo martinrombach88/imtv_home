@@ -4,3 +4,4 @@ Features:
 - blog
 - animated components
 - timeline
+- embedded google map
