@@ -65,7 +65,7 @@ const workList = [
   },
   {
     id: 4,
-    titleKR: "메멘토모리",
+    titleKR:"다시 만난 세계",
     titleENG: "Reunited World",
     mediaImg: "./assets/images/media/mementoWide.png",
     mediaImgTall: "./assets/images/media/mementoTall.jpg",
