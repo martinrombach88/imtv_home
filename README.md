@@ -5,3 +5,4 @@ Features:
 - animated components
 - timeline
 - embedded google map
+- fast translation via Context
