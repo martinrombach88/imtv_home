@@ -21,9 +21,9 @@ import inProduction from "./placeholderData/inProduction.js";
 // import axios from "axios";
 
 function App() {
-  const [data, setData] = useState({ work: null, news: null, staff: null });
-  const [loading, setLoading] = useState(false);
-
+  // const [data, setData] = useState({ work: null, news: null, staff: null });
+ // const [loading, setLoading] = useState(false);
+const loading = false;
   // const fetchData = async () => {
   //   try {
   //     const newsRes = await axios(`https://imtv-api.herokuapp.com/getnews`);
