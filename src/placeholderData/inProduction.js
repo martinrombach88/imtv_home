@@ -1,7 +1,7 @@
 const inProduction = {
   "title": "inProduction",
   "image": "/assets/images/work/foolWide.jpg",
-  "imageWide": "/assets/images/work/foolWide.jpg",
+  "imageWide": "./assets/images/work/foolWide.jpg",
   "titleKR": "중말의 바보",
   "subTitleKR": "넷플릭스와 협업",
   "titleENG": "Fool in the End",

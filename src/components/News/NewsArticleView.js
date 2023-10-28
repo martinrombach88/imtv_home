@@ -9,8 +9,6 @@ const NewsArticleView = () => {
   const article = state.state.article;
   const lang = useLang();
 
-
-
   return (
     <div className="scroll">
       <Header headerStyle={"header initialPos"} />

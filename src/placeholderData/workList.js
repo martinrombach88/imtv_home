@@ -42,6 +42,66 @@ const workList = [
     descriptionENG:
       "A certain romance between the two of us, Oh-su, a modern Cupid man without a sense of love, and Yuri, a love affair.",
   },
+  {
+    id: 3,
+    titleKR: "메멘토모리",
+    titleENG: "Memento Mori",
+    mediaImg: "./assets/images/media/osuWide.png",
+    mediaImgTall: "./assets/images/media/osuTall.jpg",
+    clipVid: "https://www.youtube.com/embed/oxOPg3AeteE",
+    fullVid: "https://youtu.be/BMbQYtWmcmo",
+    channels: "OCN",
+    date: " 2018.06.28",
+    directorKR: "황승언, 재희, 김호정, 차순배",
+    writerKR: "정유선",
+    starringKR: "이철민, 극본:조규원, 오기원",
+    descriptionKR:
+      "갑자기 그들이 깨어났다.‌누구의 소행인지 알 수 없는 가운데 6명이 한 장소에서 동시에 깨어났다.‌연결고리가 없는 이들 6명이 벌이는 '생존 게임'이 시작됐다.",
+    directorENG: "Lee Chul-min",
+    writerENG: "Gyu-won Jo, Oh Ki-won",
+    starringENG: "Hwang Seung-eon, Jae-hee, Kim Ho-jeong, Cha Soon-bae",
+    descriptionENG:
+      "Six people woke up at the same time in one place, without knowing why. A 'survival game' played by these six people without a connection has begun..",
+  },
+  {
+    id: 4,
+    titleKR: "메멘토모리",
+    titleENG: "Reunited World",
+    mediaImg: "./assets/images/media/mementoWide.png",
+    mediaImgTall: "./assets/images/media/mementoTall.jpg",
+    clipVid: "https://www.youtube.com/embed/kOeYJBzbLsI",
+    fullVid: "https://youtu.be/SLaU1iEbwB0",
+    channels: "SBS",
+    date: " 2017.07.07 ~ 2017.09.21",
+    directorKR: "백수찬",
+    writerKR: "이희명",
+    starringKR: "여진구, 이연희",
+    descriptionKR:
+    "열아홉 살 청년과 같은 해 태어난 동갑 친구인 서른한 살 여자. 12년 나이 차이가 나는 동갑 소꿉친구 남녀의 판타지 로맨스.",
+    directorENG: "Baek Soo-chan",
+    writerENG: "Lee Hee-myung",
+    starringENG: "Yeo Jin-goo, Lee Yeon-hee",
+    descriptionENG:
+      "Six people woke up at the same time in one place, without knowing why. A 'survival game' played by these six people without a connection has begun..",
+  },
 ];
 
 export default workList;
+
+//https://www.youtube.com/embed/kOeYJBzbLsI
+/*
+
+다시 만난 세계
+열아홉 살 청년과 같은 해 태어난 동갑 친구인 서른한 살 여자. 12년 나이 차이가 나는 동갑 소꿉친구 남녀의 판타지 로맨스.
+방영채널: SBS
+방영일시: 2017.07.07 ~ 2017.09.21
+출연: 여진구, 이연희
+연출: 백수찬, 극본:이희명
+
+Reunited World
+A 31-year-old woman, a friend of the same age, was born the same year as a 19-year-old young man. Fantasy romance between childhood friends of the same age with a 12-year age difference.
+Available on: SBS
+Release Date: 2017.07.07 ~ 2017.09.21
+Starring: Yeo Jin-goo, Lee Yeon-hee
+Directed by: Baek Soo-chan, Written by:Lee Hee-myung
+*/
