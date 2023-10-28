@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./News.css";
-import { useState, useRef, forwardRef } from "react";
+import { useState, forwardRef } from "react";
 import NewsCards from "./NewsCards";
 import NewsPagination from "./NewsPagination";
 import Arrow from "../Arrow/Arrow";

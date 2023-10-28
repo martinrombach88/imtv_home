@@ -8,11 +8,14 @@ import Arrow from "../Arrow/Arrow";
 const InProduction = forwardRef(({ object, refFunction }, ref) => {
   const lang = useLang();
   const navigate = useNavigate();
+  const article = object.article;
+  const styleObject = {backgroundColor: object.backgroundColor, color: object.color}
+
   // const ipList = [];
   // const [article, setArticle] = useState(null);
-  const article = object.article;
+
   // const [styleObject, setStyleObject] = useState({});
-  const styleObject = {backgroundColor: object.backgroundColor, color: object.color}
+
 
   // useEffect(() => {
   //   setArticle(object.article);

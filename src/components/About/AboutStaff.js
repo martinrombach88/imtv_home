@@ -1,9 +1,9 @@
 import { useState } from "react";
 import AboutStaffName from "./AboutStaffName";
 import Arrow from "../Arrow/Arrow";
-import aboutList from "./aboutList";
+// import aboutList from "./aboutList";
 import "./About.css";
-import { useRef, forwardRef } from "react";
+import { forwardRef } from "react";
 
 const AboutStaff = forwardRef(({ staffList, refFunction }, ref) => {
   const [profile, setProfile] = useState(null);
