@@ -3,7 +3,7 @@
   "homepage": "https://martinrombachdev.com/imtv_home",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
+,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@merc/react-timeline": "^0.1.42",
