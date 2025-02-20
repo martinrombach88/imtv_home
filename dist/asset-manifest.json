@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/imtv_home/static/css/main.ba1db889.css",
+    "main.js": "/imtv_home/static/js/main.59a3439b.js",
+    "index.html": "/imtv_home/index.html",
+    "main.ba1db889.css.map": "/imtv_home/static/css/main.ba1db889.css.map",
+    "main.59a3439b.js.map": "/imtv_home/static/js/main.59a3439b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba1db889.css",
+    "static/js/main.59a3439b.js"
+  ]
+}
